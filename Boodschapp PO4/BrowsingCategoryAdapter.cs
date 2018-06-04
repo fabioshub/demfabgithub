@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -35,10 +36,11 @@ namespace Boodschapp_PO4
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            BrowsingViewHolder vh = holder as BrowsingViewHolder;
-            vh.Category.Text = mProductList[position].category.ToString();
+            BrowsingViewHolder vh   = holder as BrowsingViewHolder;
+            vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
-            //vh.Group.Text = mProductList[position].GroupName;
+            //vh.Group.Text         = mProductList[position].GroupName;
+            vh.Category.Typeface    = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
         }
 
         public override int ItemCount
