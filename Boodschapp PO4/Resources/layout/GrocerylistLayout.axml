@@ -21,34 +21,23 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:id="@+id/buttone"
-            android:background="#fff77800"
-            android:textColor="#ffffffff"
-            android:textSize="24sp"
-            android:backgroundTint="#ffffb800"
-            android:text="&lt;" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:id="@+id/demi"
             android:background="#fff77800"
             android:textColor="#ffffffff"
-            android:textSize="24sp"
+            android:textSize="17sp"
             android:backgroundTint="#ffffa900"
-            android:text="demi activity" />
+            android:text="Terug naar items selecteren" />
         <Button
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:id="@+id/buttond"
+            android:id="@+id/savebutton"
             android:background="#fff77800"
             android:textColor="#ffffffff"
-            android:textSize="24sp"
-            android:backgroundTint="#ffff9b00"
-            android:text="=" />
+            android:textSize="17sp"
+            android:backgroundTint="#ffbf7f00"
+            android:text="Retrieve current list" />
     </GridLayout>
     <GridLayout
         android:layout_width="match_parent"
@@ -89,12 +78,7 @@
             android:maxWidth="0dp"
             android:minHeight="0dp"
             android:maxHeight="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:paddingBottom="0dp"
-            android:paddingLeft="10dp"
-            android:paddingStart="0dp"
-            android:paddingEnd="0dp"
+            android:paddingLeft="20dp"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="0dp"
             android:textColor="#ff333333"
