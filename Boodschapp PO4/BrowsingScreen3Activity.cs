@@ -79,6 +79,7 @@ namespace Boodschapp_PO4
             Counter = 0;
 
 
+
             for(int i = 0; i < ClickedProducts.Count; i++)
             {
                 if (ClickedProducts[i] != mProductList[position].name.ToString())

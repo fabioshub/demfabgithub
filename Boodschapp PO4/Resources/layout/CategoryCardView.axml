@@ -26,11 +26,12 @@
             android:text="Category"
             android:textSize="12sp"
             android:layout_marginLeft="4dp" />
+    <!--</LinearLayout>-->
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/browsingimageView" />
-    <!--</LinearLayout>-->
+            android:id="@+id/browsingimageView"
+            android:layout_gravity="right" />
     </android.support.v7.widget.CardView>
 </RelativeLayout>
