@@ -51,6 +51,7 @@ namespace Boodschapp_PO4
         void OnClick(int position)
         {
             if (ItemClick != null) ItemClick(this, position);
+            
         }
 
 

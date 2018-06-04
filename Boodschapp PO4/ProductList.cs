@@ -23,6 +23,7 @@ namespace Boodschapp_PO4
 
         public int image { get; }
 
+
         public Product(ProductCategory category = ProductCategory.Other, ProductGroup group = ProductGroup.Other, string name = "Default", int image = 0)
         {
             this.category   = category;

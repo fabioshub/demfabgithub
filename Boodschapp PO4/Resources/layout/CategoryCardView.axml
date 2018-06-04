@@ -21,24 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-<<<<<<< HEAD
-            android:padding="8dp">-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/categoryView"
-            android:textColor="#333333"
-            android:text="Category"
-            android:textSize="12sp"
-            android:layout_marginLeft="4dp" />
-    <!--</LinearLayout>-->
-        <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/browsingimageView"
-            android:layout_gravity="right" />
-=======
             android:paddingTop="0dp"
             android:paddingLeft="5dp">
             <TextView
@@ -55,6 +37,5 @@
                 android:id="@+id/browsingimageView"
                 android:layout_width="wrap_content" />
         </LinearLayout>
->>>>>>> 813e61bcbd3f499e445b0d5e69eed9229515c819
     </android.support.v7.widget.CardView>
 </RelativeLayout>

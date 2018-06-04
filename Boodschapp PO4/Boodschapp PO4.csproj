@@ -203,7 +203,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CardviewCircle.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\values-v21\styles.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>

@@ -77,7 +77,7 @@ namespace Boodschapp_PO4
         {
             int Counter;
             Counter = 0;
-
+            
 
 
             for(int i = 0; i < ClickedProducts.Count; i++)
