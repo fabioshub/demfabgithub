@@ -9,6 +9,7 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using Android.Support.V7.App;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Boodschapp_PO4
 {
@@ -63,7 +64,7 @@ namespace Boodschapp_PO4
 
         }
 
-        void OnItemClick(object sender, int position)
+        async void OnItemClick(object sender, int position)
         {
             var intent = new Intent(this, typeof(BrowsingScreen3Activity));
 
@@ -73,18 +74,18 @@ namespace Boodschapp_PO4
             b.PutStringArray("lijst", ListOfProducts.ToArray());
             intent.PutExtras(b);
 
-            Toast.MakeText(this, "This is in group " + mProductList[position].group, ToastLength.Short).Show();
-
+            //Toast.MakeText(this, "This is in group " + mProductList[position].group, ToastLength.Short).Show();
+            await Task.Delay(300);
             StartActivity(intent);
         }
 
 
-        void Button_Click(object sender, EventArgs e)
+        async void Button_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(GrocerylistActivity));
 
             intent.PutExtra("lijst", ListOfProducts.ToArray());
-
+            await Task.Delay(300);
             StartActivity(intent);
         }
     }
