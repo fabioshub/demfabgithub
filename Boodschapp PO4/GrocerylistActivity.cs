@@ -85,7 +85,7 @@ namespace Boodschapp_PO4
 
             if (currentvar1 == "")
             {
-                Toast.MakeText(this, "Spoor jij Niet? nigga u gay lil fag ass midget strapon anal bish", ToastLength.Long).Show();
+                Toast.MakeText(this, "Item invoeren aub.", ToastLength.Long).Show();
                 foreach (var v in mItems)
                 {
                     Console.WriteLine(v);
