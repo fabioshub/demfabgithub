@@ -7,19 +7,31 @@ using System;
 using PCLStorage;
 using System.Threading.Tasks;
 using Android.Content;
+using System.IO;
 
 namespace Boodschapp_PO4
 {
+    public class person 
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+
     [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class GrocerylistActivity : Activity
     {
-        Button              button, buttonDemi;
+        Button              button, buttonDemi, savebutton;
         List<string>        mItems = new List<string>();
 
         ListView            mListView;
         EditText            editText1;
         ListviewAdapter   adapter;
 
+        string fullPath = Path.Combine(
+            System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
+             "localstorage6.txt");
+        
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,6 +41,7 @@ namespace Boodschapp_PO4
 
             button      = FindViewById<Button>(Resource.Id.button1);
             buttonDemi  = FindViewById<Button>(Resource.Id.demi);
+            savebutton = FindViewById<Button>(Resource.Id.savebutton);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
 
             if (this.Intent.Extras != null)
@@ -37,7 +50,7 @@ namespace Boodschapp_PO4
                 mItems          = productlist.ToList();
             }
 
-            //mItems.Add("appel");
+
 
             adapter             = new ListviewAdapter(this, mItems);
             mListView.Adapter   = adapter;
@@ -45,30 +58,10 @@ namespace Boodschapp_PO4
             button.Click        += Button_Click;
             mListView.ItemClick += MListView_ItemClick;
             buttonDemi.Click    += ButtonDemi_Click;
-
+            savebutton.Click += Savebutton_Click;
         }
 
-        //public async Task PCLStorageSample()
-        //{
-        //    IFolder folder = await rootFolder.CreateFolderAsync("MySubFolder", CreationCollisionOption.OpenIfExists);
-        //    IFile file = await folder.CreateFileAsync("answer.txt", CreationCollisionOption.ReplaceExisting);
-        //    await file.WriteAllTextAsync("42");
-        //} 
 
-
-        //public static async Task<string> ReadFileContent(string fileName, IFolder rootFolder)
-        //{
-        //    ExistenceCheckResult exist = await rootFolder.CheckExistsAsync(fileName);
-
-        //    string text = null;
-        //    if (exist == ExistenceCheckResult.FileExists)
-        //    {
-        //        IFile file = await rootFolder.GetFileAsync(fileName);
-        //        text = await file.ReadAllTextAsync();
-        //    }
-
-        //    return text;
-        //}
 
         void Button_Click(object sender, System.EventArgs e)
         {
@@ -76,21 +69,21 @@ namespace Boodschapp_PO4
 
             var currentvar1 = editText1.Text;
 
+
             if (currentvar1 != "")
             {
                 mItems.Add(currentvar1);
                 adapter.NotifyDataSetChanged();
                 editText1.Text = "";
+                string jsonoutput = Newtonsoft.Json.JsonConvert.SerializeObject(mItems, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(fullPath, jsonoutput);
             }
+
 
             if (currentvar1 == "")
             {
-                Toast.MakeText(this, "Item invoeren aub.", ToastLength.Long).Show();
-                foreach (var v in mItems)
-                {
-                    Console.WriteLine(v);
-                    Console.WriteLine(v);
-                }
+
+
             }
         }
 
@@ -98,7 +91,6 @@ namespace Boodschapp_PO4
         {
             mItems.Remove(mItems[e.Position]);
             adapter.NotifyDataSetChanged();
-
         }
 
         void ButtonDemi_Click(object sender, EventArgs e)
@@ -110,6 +102,18 @@ namespace Boodschapp_PO4
             StartActivity(demiIntent);
         }
 
+
+void Savebutton_Click(object sender, EventArgs e)
+        {
+            var storedjson = File.ReadAllText(fullPath);
+            var newinstance = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(storedjson);
+            foreach (var v in newinstance)
+            {
+                mItems.Add(v);
+                adapter.NotifyDataSetChanged();
+
+            }
+        }
 
     }
 }
