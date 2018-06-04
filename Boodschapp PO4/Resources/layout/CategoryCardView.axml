@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="70dp"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
     <android.support.v7.widget.CardView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cardviewID"
         card_view:cardElevation="0dp"
         card_view:cardUseCompatPadding="true"
         card_view:cardCornerRadius="4dp"
         card_view:cardBackgroundColor="#E59675">
-    <!--<LinearLayout
+        <ImageView
+            android:src="@drawable/cardviewcircle"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+<<<<<<< HEAD
             android:padding="8dp">-->
         <TextView
             android:layout_width="wrap_content"
@@ -33,5 +38,23 @@
             android:layout_height="match_parent"
             android:id="@+id/browsingimageView"
             android:layout_gravity="right" />
+=======
+            android:paddingTop="0dp"
+            android:paddingLeft="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/categoryView"
+                android:textColor="#333333"
+                android:text="Category"
+                android:textSize="27sp"
+                android:layout_marginLeft="4dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_height="match_parent"
+                android:id="@+id/browsingimageView"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+>>>>>>> 813e61bcbd3f499e445b0d5e69eed9229515c819
     </android.support.v7.widget.CardView>
 </RelativeLayout>

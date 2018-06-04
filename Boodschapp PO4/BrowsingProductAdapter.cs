@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -39,6 +40,7 @@ namespace Boodschapp_PO4
             //vh.Category.Text      = mProductList[position].category.ToString();
             //vh.Group.Text         = mProductList[position].group.ToString();
             vh.Name.Text            = mProductList[position].name.ToString();
+            vh.Name.Typeface        = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
         }
 
         public override int ItemCount
