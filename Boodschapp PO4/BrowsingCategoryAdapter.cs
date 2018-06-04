@@ -18,19 +18,19 @@ namespace Boodschapp_PO4
     //----------------------------------------------------------------------
     public class BrowsingCategoryAdapter : RecyclerView.Adapter
     {
-        public event EventHandler<int> ItemClick;
-        public ProductList mProductList;
+        public event EventHandler<int>  ItemClick;
+        public ProductList              mProductList;
 
 
         public BrowsingCategoryAdapter(ProductList productList)
         {
-            mProductList = productList;
+            mProductList            = productList;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.CategoryCardView, parent, false);
-            BrowsingViewHolder vh = new BrowsingViewHolder(itemView, OnClick);
+            View itemView           = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.CategoryCardView, parent, false);
+            BrowsingViewHolder vh   = new BrowsingViewHolder(itemView, OnClick);
             return vh;
         }
 
