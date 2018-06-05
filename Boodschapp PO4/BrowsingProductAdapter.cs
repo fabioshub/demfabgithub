@@ -20,6 +20,9 @@ namespace Boodschapp_PO4
     {
         public event EventHandler<int>  ItemClick;
         public ProductList              mProductList;
+        int                             row_index;
+        List<CardView>                  cardviewList = new List<CardView>();
+        List<int>                       ProductIDSelected = new List<int>();
 
 
         public BrowsingProductAdapter(ProductList productlist)
@@ -41,6 +44,28 @@ namespace Boodschapp_PO4
             //vh.Group.Text         = mProductList[position].group.ToString();
             vh.Name.Text            = mProductList[position].name.ToString();
             vh.Name.Typeface        = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            int counter             = 0;
+
+            //cardviewList.Add(vh.CardViewer);
+
+            for (int i = 0; i <ProductIDSelected.Count; i++)
+            {
+                if (ProductIDSelected[i] == position)
+                {
+                    counter += 1;
+                    //vh.CardViewer.SetCardBackgroundColor(Android.Graphics.Color.LightGreen);
+                }
+            }
+            
+            if (counter == 1)
+            {
+                vh.CardViewer.SetCardBackgroundColor(Android.Graphics.Color.LightGreen);
+            }
+            else
+            {
+                vh.CardViewer.SetCardBackgroundColor(Android.Graphics.Color.White);
+            }
+
         }
 
         public override int ItemCount
@@ -50,6 +75,29 @@ namespace Boodschapp_PO4
 
         void OnClick(int position)
         {
+            row_index = 0;
+
+            for (int i = 0; i < ProductIDSelected.Count; i++)
+            {
+                if (ProductIDSelected[i] != position)
+                {
+                    row_index += 1;   
+                }
+            }
+
+            if (row_index == ProductIDSelected.Count)
+            {
+                ProductIDSelected.Add(position);
+            }
+
+            else
+            {
+                ProductIDSelected.Remove(position);
+            }
+
+            NotifyDataSetChanged();
+            
+
             if (ItemClick != null) ItemClick(this, position);
             
         }

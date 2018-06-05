@@ -42,6 +42,9 @@ namespace Boodschapp_PO4
                         group: ProductGroup.Fruits,
                         name: "Strawberries"),
             new Product( category: ProductCategory.Food,
+                        group: ProductGroup.Fruits,
+                        name: "Apples"),
+            new Product( category: ProductCategory.Food,
                         group: ProductGroup.Grains,
                         name: "Bread"),
             new Product( category: ProductCategory.Food,
@@ -121,14 +124,17 @@ namespace Boodschapp_PO4
         public ProductList(ProductCategory CategoryID)
         {
             mProducts = new List<Product>();
+            //int counter = 0;
 
             for (int i = 0; i < mConfirmedProducts.Length; i++)
             {
                 if (mConfirmedProducts[i].category == CategoryID)
                 {
+
                     mProducts.Add(mConfirmedProducts[i]);
                 }
             }
+            
         }
 
         public ProductList(ProductCategory CategoryID, ProductGroup GroupID)
