@@ -31,11 +31,11 @@ namespace Boodschapp_PO4
             SetContentView(Resource.Layout.BrowsingLayout1);
             mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
 
-            if (this.Intent.Extras != null)
-            {
-                var productlist = Intent.Extras.GetStringArray("lijst");
-                ListOfProducts  = productlist.ToList();
-            }
+            //if (this.Intent.Extras != null)
+            //{
+            //    var productlist = Intent.Extras.GetStringArray("lijst");
+            //    ListOfProducts  = productlist.ToList();
+            //}
 
 
             button = FindViewById<Button>(Resource.Id.button1);
@@ -77,7 +77,7 @@ namespace Boodschapp_PO4
         {
             var intent = new Intent(this, typeof(GrocerylistActivity));
 
-            intent.PutExtra("lijst", ListOfProducts.ToArray());
+            //intent.PutExtra("lijst", ListOfProducts.ToArray());
 
             StartActivity(intent);
         }

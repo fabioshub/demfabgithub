@@ -26,11 +26,11 @@ namespace Boodschapp_PO4
 
         ListView            mListView;
         EditText            editText1;
-        ListviewAdapter   adapter;
+        ListviewAdapter     adapter;
 
         string fullPath = Path.Combine(
             System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
-             "localstorage6.txt");
+             "localstorage4908111.txt");
         
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -44,14 +44,6 @@ namespace Boodschapp_PO4
             savebutton = FindViewById<Button>(Resource.Id.savebutton);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
 
-            if (this.Intent.Extras != null)
-            {
-                var productlist = Intent.Extras.GetStringArray("lijst");
-                mItems          = productlist.ToList();
-            }
-
-
-
             adapter             = new ListviewAdapter(this, mItems);
             mListView.Adapter   = adapter;
 
@@ -59,6 +51,31 @@ namespace Boodschapp_PO4
             mListView.ItemClick += MListView_ItemClick;
             buttonDemi.Click    += ButtonDemi_Click;
             savebutton.Click += Savebutton_Click;
+
+
+
+
+            try
+            {
+                var storedjson1 = File.ReadAllText(fullPath);
+                var newinstance1 = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(storedjson1);
+                if (newinstance1.Any())
+                {
+                    foreach (var v in newinstance1)
+                    {
+                        Console.WriteLine(v);
+                        mItems.Add(v);
+                        adapter.NotifyDataSetChanged();
+
+                    }
+                }
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("error: empty list" + e);
+            }
+
         }
 
 
@@ -82,9 +99,10 @@ namespace Boodschapp_PO4
 
             if (currentvar1 == "")
             {
-
-
+                
             }
+
+
         }
 
         void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -97,13 +115,13 @@ namespace Boodschapp_PO4
         {
             var demiIntent = new Intent(this, typeof(BrowsingScreen1Activity));
 
-            demiIntent.PutExtra("lijst", mItems.ToArray());
+            //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(demiIntent);
         }
 
 
-void Savebutton_Click(object sender, EventArgs e)
+        void Savebutton_Click(object sender, EventArgs e)
         {
             var storedjson = File.ReadAllText(fullPath);
             var newinstance = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(storedjson);

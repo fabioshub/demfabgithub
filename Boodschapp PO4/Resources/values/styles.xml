@@ -2,7 +2,7 @@
   <style name="AppTheme" parent="AppTheme.Base"></style>
 
 
-  <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
     <!--<item name="colorPrimary">#F9A349</item>
     <item name="colorPrimaryDark">#F9A349</item>-->
 
