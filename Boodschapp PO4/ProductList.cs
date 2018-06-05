@@ -23,6 +23,7 @@ namespace Boodschapp_PO4
 
         public int image { get; }
 
+
         public Product(ProductCategory category = ProductCategory.Other, ProductGroup group = ProductGroup.Other, string name = "Default", int image = 0)
         {
             this.category   = category;
@@ -40,6 +41,9 @@ namespace Boodschapp_PO4
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Fruits,
                         name: "Strawberries"),
+            new Product( category: ProductCategory.Food,
+                        group: ProductGroup.Fruits,
+                        name: "Apples"),
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Grains,
                         name: "Bread"),
@@ -120,14 +124,17 @@ namespace Boodschapp_PO4
         public ProductList(ProductCategory CategoryID)
         {
             mProducts = new List<Product>();
+            //int counter = 0;
 
             for (int i = 0; i < mConfirmedProducts.Length; i++)
             {
                 if (mConfirmedProducts[i].category == CategoryID)
                 {
+
                     mProducts.Add(mConfirmedProducts[i]);
                 }
             }
+            
         }
 
         public ProductList(ProductCategory CategoryID, ProductGroup GroupID)
