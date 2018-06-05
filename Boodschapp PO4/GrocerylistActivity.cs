@@ -30,7 +30,7 @@ namespace Boodschapp_PO4
 
         string fullPath = Path.Combine(
             System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
-             "localstorage4908111.txt");
+             "appel.txt");
         
 
         protected override void OnCreate(Bundle savedInstanceState)
