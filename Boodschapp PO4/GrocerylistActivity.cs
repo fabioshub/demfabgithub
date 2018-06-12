@@ -18,7 +18,7 @@ namespace Boodschapp_PO4
     }
 
 
-    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
     public class GrocerylistActivity : Activity
     {
         Button              button, buttonDemi, savebutton;
@@ -30,7 +30,7 @@ namespace Boodschapp_PO4
 
         string fullPath = Path.Combine(
             System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
-             "appel.txt");
+             "anushaar.txt");
         
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -109,6 +109,8 @@ namespace Boodschapp_PO4
         {
             mItems.Remove(mItems[e.Position]);
             adapter.NotifyDataSetChanged();
+            string jsonoutput = Newtonsoft.Json.JsonConvert.SerializeObject(mItems, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(fullPath, jsonoutput);
         }
 
         void ButtonDemi_Click(object sender, EventArgs e)

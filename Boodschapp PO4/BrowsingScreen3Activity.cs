@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using Android.Support.V7.App;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Boodschapp_PO4
 {
@@ -28,6 +29,11 @@ namespace Boodschapp_PO4
         List<string>                ListOfProducts  = new List<string>();
         List<string>                ClickedProducts = new List<string>();
 
+
+        string fullPath = Path.Combine(
+            System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
+             "anushaar.txt");
+        
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate           (bundle);
@@ -40,11 +46,11 @@ namespace Boodschapp_PO4
             {
                 var category        = (ProductCategory)Intent.Extras.GetInt("CategoryID");
                 var group           = (ProductGroup)Intent.Extras.GetInt("GroupID");
-                var productlist     = Intent.Extras.GetStringArray("lijst");
+                //var productlist     = Intent.Extras.GetStringArray("lijst");
 
                 CategoryID          = category;
                 GroupID             = group;
-                ListOfProducts      = productlist.ToList();
+                //ListOfProducts      = productlist.ToList();
             }
 
             mProductList    = new ProductList(CategoryID, GroupID);
@@ -72,6 +78,32 @@ namespace Boodschapp_PO4
             AddButton.Click += OnItemAdd;
 
             mRecyclerView.SetAdapter(mAdapter);
+
+            //----------------------------------------------------------------------------------------
+            // Try and catch Set-up
+            //----------------------------------------------------------------------------------------
+
+            try
+            {
+                var storedjson1 = File.ReadAllText(fullPath);
+                var newinstance1 = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(storedjson1);
+                if (newinstance1.Any())
+                {
+                    foreach (var v in newinstance1)
+                    {
+                        Console.WriteLine(v);
+                        ListOfProducts.Add(v);
+                    }
+                    Console.WriteLine(ListOfProducts);
+                }
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("error: empty list" + e);
+                Toast.MakeText(this,  " anushaar", ToastLength.Short).Show();
+
+            }
 
         }
 
@@ -112,12 +144,13 @@ namespace Boodschapp_PO4
             {
                 ListOfProducts.Add(ClickedProducts[i]);
             }
+            string jsonoutput = Newtonsoft.Json.JsonConvert.SerializeObject(ListOfProducts, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(fullPath, jsonoutput);
         }
 
 
         async void Button_Click(object sender, EventArgs e)
         {
-
             if (waiter == 0)
             {
                 waiter += 1;
