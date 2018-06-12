@@ -101,7 +101,7 @@ namespace Boodschapp_PO4
             catch (Exception e)
             {
                 Console.WriteLine("error: empty list" + e);
-                Toast.MakeText(this,  " anushaar", ToastLength.Short).Show();
+                //Toast.MakeText(this,  "exeption", ToastLength.Short).Show();
 
             }
 
