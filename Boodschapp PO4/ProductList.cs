@@ -614,8 +614,12 @@ namespace Boodschapp_PO4
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Canned,
                         name: "Tuinbonen"),
+
+
+
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
+                        image: Resource.Drawable.DrinkItemsAsset,
                         name: "Cola"),
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
@@ -821,8 +825,6 @@ namespace Boodschapp_PO4
                     }
 
                     counter = 0;
-
-                    //mProducts.Add(mConfirmedProducts[i]);
                 }
             }
         }

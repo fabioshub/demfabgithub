@@ -31,6 +31,10 @@ namespace Boodschapp_PO4
         {
             View itemView           = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.CategoryCardView, parent, false);
             BrowsingViewHolder vh   = new BrowsingViewHolder(itemView, OnClick);
+            //return vh;
+
+            itemView.LayoutParameters.Height = parent.Height/5;
+
             return vh;
         }
 

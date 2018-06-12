@@ -34,6 +34,7 @@ namespace Boodschapp_PO4
         {
             View itemView           = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ProductCardView, parent, false);
             BrowsingViewHolder vh   = new BrowsingViewHolder(itemView, OnClick);
+            itemView.LayoutParameters.Height = parent.Height / 8;
             return vh;
         }
 
@@ -44,6 +45,7 @@ namespace Boodschapp_PO4
             //vh.Group.Text         = mProductList[position].group.ToString();
             vh.Name.Text            = mProductList[position].name.ToString();
             vh.Name.Typeface        = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            vh.Name.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 11f);
             int counter             = 0;
 
             //cardviewList.Add(vh.CardViewer);
