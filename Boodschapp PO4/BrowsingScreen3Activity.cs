@@ -24,6 +24,7 @@ namespace Boodschapp_PO4
         Button                      AddButton;
         ProductCategory             CategoryID;
         ProductGroup                GroupID;
+        int                         waiter = 0;
         List<string>                ListOfProducts  = new List<string>();
         List<string>                ClickedProducts = new List<string>();
 
@@ -116,11 +117,17 @@ namespace Boodschapp_PO4
 
         async void Button_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(GrocerylistActivity));
 
-            intent.PutExtra("lijst", ListOfProducts.ToArray());
-            await Task.Delay(300);
-            StartActivity(intent);
+            if (waiter == 0)
+            {
+                waiter += 1;
+                var intent = new Intent(this, typeof(GrocerylistActivity));
+
+                intent.PutExtra("lijst", ListOfProducts.ToArray());
+                await Task.Delay(300);
+                StartActivity(intent);
+                waiter = 0;
+            }
         }
     }
 }
