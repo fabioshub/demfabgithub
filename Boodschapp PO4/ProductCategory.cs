@@ -14,9 +14,9 @@ namespace Boodschapp_PO4
 {
     public enum ProductCategory
     {
-        Food,
-        Drinks,
-        Dishes,
+        Eten,
+        Drinken,
+        Recepten,
         Nonfood,
         Other
     }

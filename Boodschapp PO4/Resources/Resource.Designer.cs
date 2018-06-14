@@ -1396,9 +1396,6 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f0a0003
 			public const int cardview_shadow_start_color = 2131361795;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int cardviewstate = 2131361893;
-			
 			// aapt resource value: 0x7f0a004d
 			public const int colorAccent = 2131361869;
 			
@@ -1411,8 +1408,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f0a0040
 			public const int design_bottom_navigation_shadow_color = 2131361856;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int design_error = 2131361894;
+			// aapt resource value: 0x7f0a0065
+			public const int design_error = 2131361893;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int design_fab_shadow_end_color = 2131361857;
@@ -1438,8 +1435,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f0a0048
 			public const int design_snackbar_background_color = 2131361864;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int design_tint_password_toggle = 2131361895;
+			// aapt resource value: 0x7f0a0066
+			public const int design_tint_password_toggle = 2131361894;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int dim_foreground_disabled_material_dark = 2131361814;
@@ -1564,11 +1561,11 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f0a003a
 			public const int switch_thumb_disabled_material_light = 2131361850;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int switch_thumb_material_dark = 2131361896;
+			// aapt resource value: 0x7f0a0067
+			public const int switch_thumb_material_dark = 2131361895;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int switch_thumb_material_light = 2131361897;
+			// aapt resource value: 0x7f0a0068
+			public const int switch_thumb_material_light = 2131361896;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int switch_thumb_normal_material_dark = 2131361851;
