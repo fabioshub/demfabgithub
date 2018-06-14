@@ -14,16 +14,34 @@ using System.Threading.Tasks;
 
 namespace Boodschapp_PO4
 {
-    [Activity(Label = "boodschapp", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
     public class explainScreen : Activity
     {
+        TextView Uitleg;
+        Switch Switch1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.explainScreen);
+            Uitleg = FindViewById<TextView>(Resource.Id.uitleg);
+            Switch1 = FindViewById<Switch>(Resource.Id.switch1);
 
+            Uitleg.Text = "dit is een stuk voorbeeld text, ik neuk jullie allemaal de moeder";
+
+            Switch1.CheckedChange += Switch1_CheckedChange;
         }
+
+        void Switch1_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        {
+            int cnt = 0;
+            if (e.IsChecked)
+            {
+                cnt = cnt++;
+                    Uitleg.Text = $"anus{cnt}";
+            }
+        }
+
     }
 }

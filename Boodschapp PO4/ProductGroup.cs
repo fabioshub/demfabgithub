@@ -24,6 +24,8 @@ namespace Boodschapp_PO4
         Dairy,
         Caffinated,
         Soda,
+        Waffles,
+        Omelet,
         Pancakes,
         Pizza,
         Soup,

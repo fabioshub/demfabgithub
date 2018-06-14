@@ -18,11 +18,22 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="8"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_columnSpan="5"
             android:id="@+id/uitleg"
             android:divider="#fff77800"
             android:dividerHeight="0dp" />
+        <Switch
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="5"
+            android:id="@+id/switch1"
+            android:divider="#fff77800"
+            android:dividerHeight="0dp"
+            android:gravity="center"
+            android:paddingRight="150dp" />
     </GridLayout>
 </LinearLayout>
