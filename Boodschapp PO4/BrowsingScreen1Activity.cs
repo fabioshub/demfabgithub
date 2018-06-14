@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Boodschapp_PO4
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class BrowsingScreen1Activity : AppCompatActivity
     {
         RecyclerView                    mRecyclerView;

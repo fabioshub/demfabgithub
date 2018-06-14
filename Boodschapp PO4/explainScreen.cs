@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Boodschapp_PO4
 {
-    [Activity(Label = "boodschapp", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
     public class explainScreen : Activity
     {
         TextView Uitleg;
