@@ -22,6 +22,7 @@ namespace Boodschapp_PO4
         ProductList                     mProductList;
         Button                          button;
         ProductCategory                 CategoryID;
+        int                             waiter = 0;
         List<string>                    ListOfProducts = new List<string>();
 
         protected override void OnCreate(Bundle bundle)
@@ -66,27 +67,37 @@ namespace Boodschapp_PO4
 
         async void OnItemClick(object sender, int position)
         {
-            var intent = new Intent(this, typeof(BrowsingScreen3Activity));
+            if (waiter == 0)
+            {
+                waiter += 1;
+                var intent = new Intent(this, typeof(BrowsingScreen3Activity));
 
-            Bundle b = new Bundle();
-            b.PutInt("CategoryID", (int)mProductList[position].category);
-            b.PutInt("GroupID", (int)mProductList[position].group);
-            b.PutStringArray("lijst", ListOfProducts.ToArray());
-            intent.PutExtras(b);
+                Bundle b = new Bundle();
+                b.PutInt("CategoryID", (int)mProductList[position].category);
+                b.PutInt("GroupID", (int)mProductList[position].group);
+                b.PutStringArray("lijst", ListOfProducts.ToArray());
+                intent.PutExtras(b);
 
-            //Toast.MakeText(this, "This is in group " + mProductList[position].group, ToastLength.Short).Show();
-            await Task.Delay(300);
-            StartActivity(intent);
+                //Toast.MakeText(this, "This is in group " + mProductList[position].group, ToastLength.Short).Show();
+                await Task.Delay(300);
+                StartActivity(intent);
+                waiter = 0;
+            }
         }
 
 
         async void Button_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(GrocerylistActivity));
+            if (waiter == 0)
+            {
+                waiter += 1;
+                var intent = new Intent(this, typeof(GrocerylistActivity));
 
-            intent.PutExtra("lijst", ListOfProducts.ToArray());
-            await Task.Delay(300);
-            StartActivity(intent);
+                intent.PutExtra("lijst", ListOfProducts.ToArray());
+                await Task.Delay(300);
+                StartActivity(intent);
+                waiter = 0;
+            }
         }
     }
 }

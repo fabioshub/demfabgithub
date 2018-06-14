@@ -614,8 +614,12 @@ namespace Boodschapp_PO4
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Canned,
                         name: "Tuinbonen"),
+
+
+
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
+                        image: Resource.Drawable.DrinkItemsAsset,
                         name: "Cola"),
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
@@ -747,13 +751,7 @@ namespace Boodschapp_PO4
                         group: ProductGroup.Pancakes,
                         image: Resource.Drawable.DishItemsAsset),
             new Product( category: ProductCategory.Dishes,
-                        group: ProductGroup.Waffles,
-                        image: Resource.Drawable.DishItemsAsset),
-            new Product( category: ProductCategory.Dishes,
                         group: ProductGroup.Pizza,
-                        image: Resource.Drawable.DishItemsAsset),
-            new Product( category: ProductCategory.Dishes,
-                        group: ProductGroup.Omelet,
                         image: Resource.Drawable.DishItemsAsset),
 
             new Product( category: ProductCategory.Nonfood,
@@ -799,12 +797,34 @@ namespace Boodschapp_PO4
         public ProductList(ProductCategory CategoryID)
         {
             mProducts = new List<Product>();
+            int counter;
+            
 
             for (int i = 0; i < mConfirmedProducts.Length; i++)
             {
+                counter = 0;
+
                 if (mConfirmedProducts[i].category == CategoryID)
                 {
-                    mProducts.Add(mConfirmedProducts[i]);
+                    if (mProducts.Count == 0)
+                    {
+                        mProducts.Add(mConfirmedProducts[i]);
+                    }
+
+                    for (int j = 0; j < mProducts.Count; j++)
+                    {
+                        if (mProducts[j].group != mConfirmedProducts[i].group)
+                        {
+                            counter += 1;
+                        }
+
+                        if (counter == mProducts.Count)
+                        {
+                            mProducts.Add(mConfirmedProducts[i]);
+                        }
+                    }
+
+                    counter = 0;
                 }
             }
         }

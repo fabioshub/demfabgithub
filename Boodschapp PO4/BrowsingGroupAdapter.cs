@@ -31,6 +31,7 @@ namespace Boodschapp_PO4
         {
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.GroupCardView, parent, false);
             BrowsingViewHolder vh = new BrowsingViewHolder(itemView, OnClick);
+            itemView.LayoutParameters.Height = parent.Height / 8;
             return vh;
         }
 
@@ -40,6 +41,7 @@ namespace Boodschapp_PO4
             //vh.Category.Text      = mGroupList[position].CategoryName;
             vh.Group.Text           = mGroupList[position].group.ToString();
             vh.Group.Typeface       = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            vh.Group.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 14f);
         }
 
         public override int ItemCount
