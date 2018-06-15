@@ -41,7 +41,7 @@ namespace Boodschapp_PO4
 
             button      = FindViewById<Button>(Resource.Id.button1);
             buttonDemi  = FindViewById<Button>(Resource.Id.demi);
-            savebutton = FindViewById<Button>(Resource.Id.savebutton);
+            savebutton  = FindViewById<Button>(Resource.Id.savebutton);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
 
             adapter             = new ListviewAdapter(this, mItems);

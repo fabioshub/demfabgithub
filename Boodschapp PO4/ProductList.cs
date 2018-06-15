@@ -614,9 +614,6 @@ namespace Boodschapp_PO4
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Canned,
                         name: "Tuinbonen"),
-
-
-
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
                         image: Resource.Drawable.DrinkItemsAsset,
@@ -733,7 +730,6 @@ namespace Boodschapp_PO4
                         group: ProductGroup.Confections ),
             new Product( category: ProductCategory.Food,
                         group: ProductGroup.Vegetables ),
-
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Alcohol,
                         image: Resource.Drawable.DrinkItemsAsset),
@@ -746,30 +742,30 @@ namespace Boodschapp_PO4
             new Product( category: ProductCategory.Drinks,
                         group: ProductGroup.Soda,
                         image: Resource.Drawable.DrinkItemsAsset),
-
             new Product( category: ProductCategory.Dishes,
                         group: ProductGroup.Pancakes,
                         image: Resource.Drawable.DishItemsAsset),
             new Product( category: ProductCategory.Dishes,
                         group: ProductGroup.Pizza,
                         image: Resource.Drawable.DishItemsAsset),
-
             new Product( category: ProductCategory.Nonfood,
                         group: ProductGroup.Cosmetics,
                         image: Resource.Drawable.BathroomItemsAsset),
             new Product( category: ProductCategory.Nonfood,
                         group: ProductGroup.Bathroom,
                         image: Resource.Drawable.BathroomItemsAsset),
+
             };
 
 
         private List<Product> mProducts;
+        public int Comparing_products;
 
 
         public ProductList()
         {
             mProducts = new List<Product>();
-            mProducts.Add(new Product(ProductCategory.Food));
+            mProducts.Add(new Product(ProductCategory.Food, image: Resource.Drawable.download));
             int counter;
 
             counter = 0;
@@ -837,7 +833,43 @@ namespace Boodschapp_PO4
             {
                 if (mConfirmedProducts[i].group == GroupID)
                 {
-                    mProducts.Add(mConfirmedProducts[i]);
+                    if (mProducts.Count == 0)
+                    {
+                        mProducts.Add(mConfirmedProducts[i]);
+                    }
+
+                    else
+                    {
+                        for (int j = 0; j < mProducts.Count; j++)
+                        {
+                            Comparing_products = string.Compare(mConfirmedProducts[i].name, mProducts[j].name, StringComparison.CurrentCulture);
+
+                            if (Comparing_products == 0)
+                            {
+                                for(int k = 0; k < mConfirmedProducts[i].name.Length; k++)
+                                {
+                                    Comparing_products = string.Compare(mConfirmedProducts[i].name[0].ToString(), mProducts[j].name[0].ToString(), StringComparison.CurrentCulture);
+
+                                    if (Comparing_products < 0)
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+
+                            if (Comparing_products < 0)
+                            {
+                                mProducts.Insert(j, mConfirmedProducts[i]);
+                                break;
+                            } 
+                            
+                            if (j == mProducts.Count - 1)
+                            {
+                                mProducts.Add(mConfirmedProducts[i]);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }

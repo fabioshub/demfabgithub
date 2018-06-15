@@ -18,25 +18,26 @@
             android:src="@drawable/cardviewcircle"
             android:layout_height="match_parent"
             android:layout_width="wrap_content" />
-        <LinearLayout
+    <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:paddingTop="0dp"
-            android:paddingLeft="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/categoryView"
-                android:textColor="#333333"
-                android:text="Category"
-                android:textSize="27sp"
-                android:layout_marginLeft="4dp" />
-            <ImageView
-                android:src="@android:drawable/ic_menu_gallery"
-                android:layout_height="match_parent"
-                android:id="@+id/browsingimageView"
-                android:layout_width="wrap_content" />
-        </LinearLayout>
+            android:paddingLeft="5dp">-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categoryView"
+            android:textColor="#333333"
+            android:text="Category"
+            android:textSize="27sp"
+            android:layout_marginLeft="4dp" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:id="@+id/browsingimageView"
+            android:layout_gravity="bottom|right" />
+    <!--</LinearLayout>-->
     </android.support.v7.widget.CardView>
 </RelativeLayout>
