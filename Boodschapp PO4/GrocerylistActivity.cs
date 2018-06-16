@@ -23,7 +23,6 @@ namespace Boodschapp_PO4
     [Activity(Label = "boodschapp", MainLauncher = true, Theme = "@style/AppTheme")]
     public class GrocerylistActivity : Activity
     {
-        Button              button, buttonDemi, savebutton;
         List<string>        mItems = new List<string>();
 
         ListView            mListView;
@@ -41,9 +40,6 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.GrocerylistLayout);
 
-            button      = FindViewById<Button>(Resource.Id.button1);
-            buttonDemi  = FindViewById<Button>(Resource.Id.demi);
-            savebutton  = FindViewById<Button>(Resource.Id.savebutton);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
             editText1 = FindViewById<EditText>(Resource.Id.editText1);
             adapter             = new ListviewAdapter(this, mItems);
@@ -51,9 +47,7 @@ namespace Boodschapp_PO4
 
             //button.Click        += Button_Click;
             mListView.ItemClick += MListView_ItemClick;
-            buttonDemi.Click    += ButtonDemi_Click;
             editText1.KeyPress += EditText1_KeyPress;
-
 
 
             try

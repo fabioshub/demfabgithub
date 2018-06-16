@@ -12,22 +12,21 @@
         android:layout_height="0dp"
         android:layout_weight="5"
         android:orientation="horizontal"
-        android:rowCount="10"
+        android:rowCount="12"
         android:columnCount="5"
         android:background="#F6BE71">
         <ListView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="8"
+            android:layout_rowWeight="10"
             android:layout_columnWeight="1"
             android:layout_columnSpan="5"
             android:id="@+id/mylistView"
             android:divider="#fff77800"
             android:dividerHeight="0dp"
             app:backgroundTint="#ff821d1d"
-            android:background="#ff003e64" />
+            android:background="#fff2f2f2" />
         <EditText
-            android:background="@color/secondary_text_default_material_dark"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -40,9 +39,11 @@
             android:paddingLeft="20dp"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="0dp"
-            android:textColor="#ff333333"
+            android:textColor="#ffffffff"
             android:hint="Item..."
+            android:textColorHint="#FFFFFF"
             android:textSize="14sp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:background="#ffff7171" />
     </GridLayout>
 </LinearLayout>
