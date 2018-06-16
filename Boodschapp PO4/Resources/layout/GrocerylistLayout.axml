@@ -10,6 +10,44 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="7">
+        <TextView
+            android:text="Producten zoeken"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:id="@+id/button3"
+            android:background="#ffff8471"
+            android:gravity="center" />
+        <TextView
+            android:text="Lijst"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:id="@+id/button4"
+            android:background="#ffffc6b3"
+            android:gravity="center" />
+        <TextView
+            android:text="?"
+            android:textColor="#ff5a5a5a"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:id="@+id/button4"
+            android:background="#ffffffff"
+            android:gravity="center" />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="5"
         android:orientation="horizontal"
         android:rowCount="12"
