@@ -21,14 +21,16 @@ namespace Boodschapp_PO4
         public TextView Name            { get; private set; }
         public ImageView BrowseImage    { get; private set; }
         public CardView CardViewer      { get; private set; }
+        public CardView CategoryView    { get; private set; }
 
         public BrowsingViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
-            Category    = itemView.FindViewById<TextView>(Resource.Id.categoryView);
-            Group       = itemView.FindViewById<TextView>(Resource.Id.groupView);
-            Name        = itemView.FindViewById<TextView>(Resource.Id.productView);
-            BrowseImage = itemView.FindViewById<ImageView>(Resource.Id.browsingimageView);
-            CardViewer  = itemView.FindViewById<CardView>(Resource.Id.productcardview);
+            //Category        = itemView.FindViewById<TextView>(Resource.Id.categoryView);
+            Group           = itemView.FindViewById<TextView>(Resource.Id.groupView);
+            Name            = itemView.FindViewById<TextView>(Resource.Id.productView);
+            BrowseImage     = itemView.FindViewById<ImageView>(Resource.Id.browsingimageView);
+            CardViewer      = itemView.FindViewById<CardView>(Resource.Id.productcardview);
+            CategoryView    = itemView.FindViewById<CardView>(Resource.Id.cardviewID);
 
             itemView.Click += (sender, e) => listener(base.LayoutPosition);
         }
