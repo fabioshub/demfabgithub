@@ -22,12 +22,12 @@
         android:layout_marginRight="0.0dp"
         android:paddingBottom="10dp" />
     <ImageView
-        android:layout_width="28sp"
-        android:layout_height="28sp"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
         android:id="@+id/img1"
-        android:src="@drawable/trash2"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="30dp" />
+        android:src="@drawable/circle"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="20dp" />
 <!--<TextView
         android:text="second"
         android:layout_width="match_parent"

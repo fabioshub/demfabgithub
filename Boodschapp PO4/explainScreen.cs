@@ -26,9 +26,8 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.explainScreen);
             Uitleg = FindViewById<TextView>(Resource.Id.uitleg);
-            Switch1 = FindViewById<Switch>(Resource.Id.switch1);
 
-            Uitleg.Text = "dit is een stuk voorbeeld text, ik neuk jullie allemaal de moeder";
+            //Uitleg.Text = "dit is een stuk voorbeeld text, ik neuk jullie allemaal de moeder";
 
             Switch1.CheckedChange += Switch1_CheckedChange;
         }
