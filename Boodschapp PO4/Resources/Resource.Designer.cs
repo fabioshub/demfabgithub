@@ -2470,8 +2470,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080093
 			public const int ThirdActivityRecycler = 2131230867;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int action0 = 2131230897;
+			// aapt resource value: 0x7f0800ae
+			public const int action0 = 2131230894;
 			
 			// aapt resource value: 0x7f080080
 			public const int action_bar = 2131230848;
@@ -2494,17 +2494,17 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f08005e
 			public const int action_bar_title = 2131230814;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int action_container = 2131230894;
+			// aapt resource value: 0x7f0800ab
+			public const int action_container = 2131230891;
 			
 			// aapt resource value: 0x7f080081
 			public const int action_context_bar = 2131230849;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int action_divider = 2131230901;
+			// aapt resource value: 0x7f0800b2
+			public const int action_divider = 2131230898;
 			
-			// aapt resource value: 0x7f0800af
-			public const int action_image = 2131230895;
+			// aapt resource value: 0x7f0800ac
+			public const int action_image = 2131230892;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2521,11 +2521,11 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080060
 			public const int action_mode_close_button = 2131230816;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int action_text = 2131230896;
+			// aapt resource value: 0x7f0800ad
+			public const int action_text = 2131230893;
 			
-			// aapt resource value: 0x7f0800be
-			public const int actions = 2131230910;
+			// aapt resource value: 0x7f0800bb
+			public const int actions = 2131230907;
 			
 			// aapt resource value: 0x7f080061
 			public const int activity_chooser_view_content = 2131230817;
@@ -2575,8 +2575,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080067
 			public const int buttonPanel = 2131230823;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int cancel_action = 2131230898;
+			// aapt resource value: 0x7f0800af
+			public const int cancel_action = 2131230895;
 			
 			// aapt resource value: 0x7f080094
 			public const int cardviewID = 2131230868;
@@ -2596,8 +2596,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080077
 			public const int checkbox = 2131230839;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int chronometer = 2131230906;
+			// aapt resource value: 0x7f0800b7
+			public const int chronometer = 2131230903;
 			
 			// aapt resource value: 0x7f080025
 			public const int clip_horizontal = 2131230757;
@@ -2629,9 +2629,6 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080064
 			public const int default_activity_button = 2131230820;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int demi = 2131230888;
-			
 			// aapt resource value: 0x7f08009c
 			public const int design_bottom_sheet = 2131230876;
 			
@@ -2650,8 +2647,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080032
 			public const int disableHome = 2131230770;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int editText1 = 2131230891;
+			// aapt resource value: 0x7f0800a8
+			public const int editText1 = 2131230888;
 			
 			// aapt resource value: 0x7f080082
 			public const int edit_query = 2131230850;
@@ -2659,8 +2656,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080027
 			public const int end = 2131230759;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int end_padder = 2131230912;
+			// aapt resource value: 0x7f0800bd
+			public const int end_padder = 2131230909;
 			
 			// aapt resource value: 0x7f08004e
 			public const int enterAlways = 2131230798;
@@ -2695,11 +2692,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int gridLayout1 = 2131230887;
-			
-			// aapt resource value: 0x7f0800ad
-			public const int groupView = 2131230893;
+			// aapt resource value: 0x7f0800aa
+			public const int groupView = 2131230890;
 			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
@@ -2713,8 +2707,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080066
 			public const int icon = 2131230822;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int icon_group = 2131230911;
+			// aapt resource value: 0x7f0800bc
+			public const int icon_group = 2131230908;
 			
 			// aapt resource value: 0x7f08004b
 			public const int ifRoom = 2131230795;
@@ -2722,8 +2716,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080063
 			public const int image = 2131230819;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int info = 2131230907;
+			// aapt resource value: 0x7f0800b8
+			public const int info = 2131230904;
 			
 			// aapt resource value: 0x7f08005d
 			public const int italic = 2131230813;
@@ -2749,14 +2743,14 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080065
 			public const int list_item = 2131230821;
 			
-			// aapt resource value: 0x7f0800c5
-			public const int masked = 2131230917;
+			// aapt resource value: 0x7f0800c2
+			public const int masked = 2131230914;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int media_actions = 2131230900;
+			// aapt resource value: 0x7f0800b1
+			public const int media_actions = 2131230897;
 			
-			// aapt resource value: 0x7f0800c3
-			public const int message = 2131230915;
+			// aapt resource value: 0x7f0800c0
+			public const int message = 2131230912;
 			
 			// aapt resource value: 0x7f080042
 			public const int middle = 2131230786;
@@ -2767,8 +2761,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f08003a
 			public const int multiply = 2131230778;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int mylistView = 2131230890;
+			// aapt resource value: 0x7f0800a7
+			public const int mylistView = 2131230887;
 			
 			// aapt resource value: 0x7f08009f
 			public const int navigation_header_container = 2131230879;
@@ -2782,14 +2776,14 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080030
 			public const int normal = 2131230768;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int notification_background = 2131230909;
+			// aapt resource value: 0x7f0800ba
+			public const int notification_background = 2131230906;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int notification_main_column = 2131230903;
+			// aapt resource value: 0x7f0800b4
+			public const int notification_main_column = 2131230900;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int notification_main_column_container = 2131230902;
+			// aapt resource value: 0x7f0800b3
+			public const int notification_main_column_container = 2131230899;
 			
 			// aapt resource value: 0x7f080054
 			public const int parallax = 2131230804;
@@ -2803,11 +2797,11 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080055
 			public const int pin = 2131230805;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int productView = 2131230914;
+			// aapt resource value: 0x7f0800bf
+			public const int productView = 2131230911;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int productcardview = 2131230913;
+			// aapt resource value: 0x7f0800be
+			public const int productcardview = 2131230910;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -2824,11 +2818,11 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f08002c
 			public const int right = 2131230764;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int right_icon = 2131230908;
+			// aapt resource value: 0x7f0800b9
+			public const int right_icon = 2131230905;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int right_side = 2131230904;
+			// aapt resource value: 0x7f0800b5
+			public const int right_side = 2131230901;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -2838,9 +2832,6 @@ namespace Boodschapp_PO4
 			
 			// aapt resource value: 0x7f08000e
 			public const int save_scale_type = 2131230734;
-			
-			// aapt resource value: 0x7f0800a9
-			public const int savebutton = 2131230889;
 			
 			// aapt resource value: 0x7f08003b
 			public const int screen = 2131230779;
@@ -2935,8 +2926,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f08002d
 			public const int start = 2131230765;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int status_bar_latest_event_content = 2131230899;
+			// aapt resource value: 0x7f0800b0
+			public const int status_bar_latest_event_content = 2131230896;
 			
 			// aapt resource value: 0x7f08007a
 			public const int submenuarrow = 2131230842;
@@ -2974,8 +2965,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int time = 2131230905;
+			// aapt resource value: 0x7f0800b6
+			public const int time = 2131230902;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -3010,8 +3001,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int txt1 = 2131230892;
+			// aapt resource value: 0x7f0800a9
+			public const int txt1 = 2131230889;
 			
 			// aapt resource value: 0x7f0800a5
 			public const int uitleg = 2131230885;
@@ -3031,8 +3022,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c4
-			public const int visible = 2131230916;
+			// aapt resource value: 0x7f0800c1
+			public const int visible = 2131230913;
 			
 			// aapt resource value: 0x7f08004d
 			public const int withText = 2131230797;

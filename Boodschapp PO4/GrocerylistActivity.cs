@@ -8,6 +8,8 @@ using PCLStorage;
 using System.Threading.Tasks;
 using Android.Content;
 using System.IO;
+using Android.Views;
+using Android.Views.InputMethods;
 
 namespace Boodschapp_PO4
 {
@@ -18,7 +20,7 @@ namespace Boodschapp_PO4
     }
 
 
-    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
+    [Activity(Label = "boodschapp", MainLauncher = true, Theme = "@style/AppTheme")]
     public class GrocerylistActivity : Activity
     {
         Button              button, buttonDemi, savebutton;
@@ -39,19 +41,16 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.GrocerylistLayout);
 
-            button      = FindViewById<Button>(Resource.Id.button1);
-            buttonDemi  = FindViewById<Button>(Resource.Id.demi);
-            savebutton = FindViewById<Button>(Resource.Id.savebutton);
+            //button      = FindViewById<Button>(Resource.Id.button1);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
-
+            editText1 = FindViewById<EditText>(Resource.Id.editText1);
             adapter             = new ListviewAdapter(this, mItems);
             mListView.Adapter   = adapter;
 
-            button.Click        += Button_Click;
+            //button.Click        += Button_Click;
             mListView.ItemClick += MListView_ItemClick;
             buttonDemi.Click    += ButtonDemi_Click;
-            savebutton.Click += Savebutton_Click;
-
+            editText1.KeyPress += EditText1_KeyPress;
 
 
 
@@ -75,35 +74,58 @@ namespace Boodschapp_PO4
             {
                 Console.WriteLine("error: empty list" + e);
             }
-
         }
 
 
-
-        void Button_Click(object sender, System.EventArgs e)
+        void EditText1_KeyPress(object sender, Android.Views.View.KeyEventArgs e) 
         {
-            editText1 = FindViewById<EditText>(Resource.Id.editText1);
-
-            var currentvar1 = editText1.Text;
-
-
-            if (currentvar1 != "")
+        if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) {
+        e.Handled = true;
+        DismissKeyboard();
+        var editText = (EditText)sender;
+        var currentItem = editText.Text;
+        if (currentItem != "")
             {
-                mItems.Add(currentvar1);
+                    mItems.Add(currentItem);
                 adapter.NotifyDataSetChanged();
-                editText1.Text = "";
+                editText.Text = "";
                 string jsonoutput = Newtonsoft.Json.JsonConvert.SerializeObject(mItems, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(fullPath, jsonoutput);
             }
 
 
-            if (currentvar1 == "")
-            {
-                
+        if (currentItem == "")
+                {
+
+                }
+
             }
-
-
+            else
+                e.Handled = false;            
         }
+
+
+        private void DismissKeyboard()
+        {
+            var view = CurrentFocus;
+            if (view != null)
+            {
+                var imm = (InputMethodManager)GetSystemService(InputMethodService);
+                imm.HideSoftInputFromWindow(view.WindowToken, 0);
+            }
+        }
+
+        //void Button_Click(object sender, System.EventArgs e)
+        //{
+            
+
+        //    var currentvar1 = editText1.Text;
+
+
+        //    
+
+
+        //}
 
         void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -123,17 +145,7 @@ namespace Boodschapp_PO4
         }
 
 
-        void Savebutton_Click(object sender, EventArgs e)
-        {
-            var storedjson = File.ReadAllText(fullPath);
-            var newinstance = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(storedjson);
-            foreach (var v in newinstance)
-            {
-                mItems.Add(v);
-                adapter.NotifyDataSetChanged();
-
-            }
-        }
+       
 
     }
 }
