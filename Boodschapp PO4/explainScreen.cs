@@ -18,7 +18,6 @@ namespace Boodschapp_PO4
     public class explainScreen : Activity
     {
         TextView Uitleg;
-        Switch Switch1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,19 +26,6 @@ namespace Boodschapp_PO4
             SetContentView(Resource.Layout.explainScreen);
             Uitleg = FindViewById<TextView>(Resource.Id.uitleg);
 
-            //Uitleg.Text = "dit is een stuk voorbeeld text, ik neuk jullie allemaal de moeder";
-
-            Switch1.CheckedChange += Switch1_CheckedChange;
-        }
-
-        void Switch1_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
-        {
-            int cnt = 0;
-            if (e.IsChecked)
-            {
-                cnt = cnt++;
-                    Uitleg.Text = $"anus{cnt}";
-            }
         }
 
     }

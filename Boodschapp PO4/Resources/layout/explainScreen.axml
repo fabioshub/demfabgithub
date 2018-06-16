@@ -29,7 +29,7 @@
             android:id="@+id/uitleg"
             android:divider="#fff77800"
             android:dividerHeight="0dp"
-            android:text="Deze app bied de mogelijkheid complete gerechten te selecteren, en de benodigde items die nodig zijn dit gerecht te maken, met de klik van één knop toe te voegen aan uw boodschappenlijst. Daarnaast kunt u met behulp van de typebalk zelf ook producten handmatig toevoegen aan de lijst en/of verwijderen"
+            android:text="Deze app bied de mogelijkheid complete gerechten te selecteren, en de benodigde items die nodig zijn dit gerecht te maken, met de klik van één knop toe te voegen aan uw boodschappenlijst. Daarnaast kunt u met behulp van de typebalk zelf ook producten handmatig toevoegen aan de lijst en/of verwijderen."
             android:layout_margin="20px" />
         <TextView
             android:text="Items toevoegen"
@@ -45,7 +45,7 @@
             android:id="@+id/uitleg"
             android:divider="#fff77800"
             android:dividerHeight="0dp"
-            android:text="Vanaf het beginscherm kunt u een categorie kiezen. Hierna komt ik"
+            android:text="Vanaf het beginscherm kunt u een categorie kiezen. Eten en drinken brengen u naar een selectie van populaire producten die u meteen aan uw lijst kan toevoegen. Dishes zijn complete gerechten. "
             android:layout_margin="20px" />
         <TextView
             android:text="Handmatig items toevoegen of verwijderen"
@@ -61,7 +61,7 @@
             android:id="@+id/uitleg"
             android:divider="#fff77800"
             android:dividerHeight="0dp"
-            android:text="Dit is bij"
+            android:text="Naast het automatisch laten toevoegen aan de lijst, kunt u ook handmatig in de lijst zelf producten toevoegen door simpelweg een product in te toetsen. Dit kan handig zijn voor diverse producten die buitenlands zijn, of niet zo populair zijn. Verwijderen kan door op het kruisje naast de producten te klikken."
             android:layout_margin="20px" />
     </GridLayout>
 </LinearLayout>
