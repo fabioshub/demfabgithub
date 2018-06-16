@@ -22,7 +22,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/button3"
-            android:background="#ffffb900"
+            android:background="#ffff6125"
             android:gravity="center" />
         <TextView
             android:text="Lijst"
@@ -32,7 +32,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/button4"
-            android:background="#ffffd56f"
+            android:background="#ffff8354"
             android:gravity="center" />
         <TextView
             android:text="info?"
@@ -82,6 +82,6 @@
             android:textColorHint="#FFFFFF"
             android:textSize="14sp"
             android:singleLine="true"
-            android:background="#ffffa51a" />
+            android:background="#ffff5718" />
     </GridLayout>
 </LinearLayout>

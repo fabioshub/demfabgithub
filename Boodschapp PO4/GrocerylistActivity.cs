@@ -24,7 +24,7 @@ namespace Boodschapp_PO4
     public class GrocerylistActivity : Activity
     {
         List<string>        mItems = new List<string>();
-
+        TextView textViewdemi, textViewexplain;
         ListView            mListView;
         EditText            editText1;
         ListviewAdapter     adapter;
@@ -44,12 +44,15 @@ namespace Boodschapp_PO4
             editText1 = FindViewById<EditText>(Resource.Id.editText1);
             adapter             = new ListviewAdapter(this, mItems);
             mListView.Adapter   = adapter;
-
+            textViewdemi = FindViewById<TextView>(Resource.Id.button3);
+            textViewexplain = FindViewById<TextView>(Resource.Id.explain);
             //button.Click        += Button_Click;
             mListView.ItemClick += MListView_ItemClick;
             editText1.KeyPress += EditText1_KeyPress;
 
+            textViewexplain.Click += ButtonExplain_Click;
 
+            textViewdemi.Click += TextViewdemi_Click;
             try
             {
                 var storedjson1 = File.ReadAllText(fullPath);
@@ -131,13 +134,23 @@ namespace Boodschapp_PO4
             File.WriteAllText(fullPath, jsonoutput);
         }
 
-        void ButtonDemi_Click(object sender, EventArgs e)
+        void TextViewdemi_Click(object sender, EventArgs e)
         {
             var demiIntent = new Intent(this, typeof(BrowsingScreen1Activity));
 
             //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(demiIntent);
+        }
+
+
+        void ButtonExplain_Click(object sender, EventArgs e)
+        {
+            var explainintent = new Intent(this, typeof(explainScreen));
+
+            //demiIntent.PutExtra("lijst", mItems.ToArray());
+
+            StartActivity(explainintent);
         }
 
 
