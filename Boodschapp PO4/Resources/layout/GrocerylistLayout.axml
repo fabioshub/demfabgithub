@@ -40,7 +40,7 @@
             android:layout_marginBottom="0dp"
             android:layout_marginTop="0dp"
             android:textColor="#ffffffff"
-            android:hint="Item..."
+            android:hint="Type hier uw producten..."
             android:textColorHint="#FFFFFF"
             android:textSize="14sp"
             android:singleLine="true"
