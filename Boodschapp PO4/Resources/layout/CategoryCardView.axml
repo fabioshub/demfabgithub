@@ -35,9 +35,8 @@
             android:textSize="27sp"
             android:layout_marginLeft="4dp" />-->
         <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_height="20dp"
-            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
             android:id="@+id/browsingimageView"
             android:layout_gravity="bottom|right" />
     <!--</LinearLayout>-->
