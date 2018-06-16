@@ -20,6 +20,7 @@ namespace Boodschapp_PO4
     {
         public event EventHandler<int>  ItemClick;
         public ProductList              mProductList;
+        int radius;
 
 
         public BrowsingCategoryAdapter(ProductList productList)
@@ -34,6 +35,7 @@ namespace Boodschapp_PO4
             //return vh;
 
             itemView.LayoutParameters.Height = parent.Height/5;
+            radius = itemView.LayoutParameters.Height;
 
             return vh;
         }
@@ -41,8 +43,13 @@ namespace Boodschapp_PO4
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             BrowsingViewHolder vh   = holder as BrowsingViewHolder;
-            vh.Category.Text        = mProductList[position].category.ToString();
+            //vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
+            vh.CategoryView.Radius = radius / 2.2f;
+            
+           
+
+
 
             //vh.Group.Text         = mProductList[position].GroupName;
             //vh.Category.Typeface    = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
