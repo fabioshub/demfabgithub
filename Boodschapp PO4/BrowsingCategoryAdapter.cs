@@ -48,7 +48,7 @@ namespace Boodschapp_PO4
                 itemView.LayoutParameters.Height = value;
             }
  
-            //radius = itemView.LayoutParameters.Height;
+            radius = itemView.LayoutParameters.Height;
 
             return vh;
         }
@@ -59,6 +59,25 @@ namespace Boodschapp_PO4
             //vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
             //vh.CategoryView.Radius = radius / 2.2f;
+
+            if (mProductList[position].category.ToString() == "Food")
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+
+            if (mProductList[position].category.ToString() == "Drinks")
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+
+            if (mProductList[position].category.ToString() == "Dishes")
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+
+            if (mProductList[position].category.ToString() == "Nonfood")
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+
+            vh.BrowseImage.LayoutParameters.Height = radius - (radius / 3);
+            vh.BrowseImage.LayoutParameters.Width  = radius;
+
+
+
+
 
 
 
