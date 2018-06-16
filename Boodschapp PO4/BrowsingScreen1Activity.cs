@@ -10,6 +10,7 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using Android.Support.V7.App;
 using System.Threading.Tasks;
+using Android.Support.Transitions;
 
 namespace Boodschapp_PO4
 {
@@ -30,7 +31,7 @@ namespace Boodschapp_PO4
             base.OnCreate(bundle);
             mProductList = new ProductList();
 
-            SetContentView(Resource.Layout.BrowsingLayout1);
+            SetContentView(Resource.Layout.BrowsingLayout1);          
             mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
 
             //if (this.Intent.Extras != null)
