@@ -52,6 +52,14 @@ namespace Boodschapp_PO4
         Spaghetti,
         Burrito,
         Taart,
+        Cake,
+        Chili,
+        Macaroni,
+        Bami,
+        Nasi,
+        Feestje,
+        Stamppot,
+        
 
 
     }
