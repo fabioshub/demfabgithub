@@ -2602,9 +2602,6 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f0800a7
 			public const int button4 = 2131230887;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int button5 = 2131230888;
-			
 			// aapt resource value: 0x7f080067
 			public const int buttonPanel = 2131230823;
 			
@@ -2703,6 +2700,9 @@ namespace Boodschapp_PO4
 			
 			// aapt resource value: 0x7f080076
 			public const int expanded_menu = 2131230838;
+			
+			// aapt resource value: 0x7f0800a8
+			public const int explain = 2131230888;
 			
 			// aapt resource value: 0x7f080028
 			public const int fill = 2131230760;
