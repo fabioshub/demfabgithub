@@ -35,7 +35,7 @@
             android:background="#ffffd56f"
             android:gravity="center" />
         <TextView
-            android:text="?"
+            android:text="info?"
             android:textColor="#ff5a5a5a"
             android:layout_width="0dp"
             android:layout_height="0dp"
