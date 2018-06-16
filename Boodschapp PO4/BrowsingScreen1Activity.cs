@@ -41,7 +41,7 @@ namespace Boodschapp_PO4
             //}
 
 
-            button = FindViewById<Button>(Resource.Id.button1);
+            //button = FindViewById<Button>(Resource.Id.button1);
 
             //----------------------------------------------------------------------------------------
             // Layout Managing Set-up
@@ -53,7 +53,7 @@ namespace Boodschapp_PO4
             // Adapter Set-up
             mAdapter            = new BrowsingCategoryAdapter(mProductList);
             mAdapter.ItemClick  += OnItemClick;
-            button.Click        += Button_Click;
+            //button.Click        += Button_Click;
             mRecyclerView.SetAdapter(mAdapter);
 
         }
