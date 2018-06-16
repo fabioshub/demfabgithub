@@ -44,7 +44,7 @@ namespace Boodschapp_PO4
             //vh.Category.Text      = mProductList[position].category.ToString();
             //vh.Group.Text         = mProductList[position].group.ToString();
             vh.Name.Text            = mProductList[position].name.ToString();
-            vh.Name.Typeface        = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            //vh.Name.Typeface        = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
             vh.Name.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 11f);
             int counter             = 0;
 
