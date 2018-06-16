@@ -40,7 +40,7 @@ namespace Boodschapp_PO4
             BrowsingViewHolder vh   = holder as BrowsingViewHolder;
             //vh.Category.Text      = mGroupList[position].CategoryName;
             vh.Group.Text           = mGroupList[position].group.ToString();
-            vh.Group.Typeface       = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            //vh.Group.Typeface       = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
             vh.Group.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 14f);
         }
 

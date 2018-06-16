@@ -45,7 +45,7 @@ namespace Boodschapp_PO4
             vh.BrowseImage.SetImageResource(mProductList[position].image);
 
             //vh.Group.Text         = mProductList[position].GroupName;
-            vh.Category.Typeface    = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
+            //vh.Category.Typeface    = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
         }
 
         public override int ItemCount
