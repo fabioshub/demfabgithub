@@ -42,7 +42,6 @@ namespace Boodschapp_PO4
 
             button = FindViewById<Button>(Resource.Id.button1);
 
-
             //----------------------------------------------------------------------------------------
             // Layout Managing Set-up
 

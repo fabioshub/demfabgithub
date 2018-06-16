@@ -43,6 +43,7 @@ namespace Boodschapp_PO4
             BrowsingViewHolder vh   = holder as BrowsingViewHolder;
             vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
+
             //vh.Group.Text         = mProductList[position].GroupName;
             vh.Category.Typeface    = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/BubbleboddyNeue-BoldTrial.ttf");
         }

@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         android:rowCount="10"
         android:columnCount="5"
-        android:background="#FFFFFF">
+        android:background="#F6BE71">
         <ListView
             android:layout_width="0dp"
             android:layout_height="0dp"

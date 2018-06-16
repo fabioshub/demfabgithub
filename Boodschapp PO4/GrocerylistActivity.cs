@@ -13,7 +13,7 @@ using Android.Views.InputMethods;
 
 namespace Boodschapp_PO4
 {
-    public class person 
+    public class person
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -32,8 +32,8 @@ namespace Boodschapp_PO4
 
         string fullPath = Path.Combine(
             System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
-             "anushaar.txt");
-        
+             "Grocerylist.txt");
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,7 +41,9 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.GrocerylistLayout);
 
-            //button      = FindViewById<Button>(Resource.Id.button1);
+            button      = FindViewById<Button>(Resource.Id.button1);
+            buttonDemi  = FindViewById<Button>(Resource.Id.demi);
+            savebutton  = FindViewById<Button>(Resource.Id.savebutton);
             mListView   = FindViewById<ListView>(Resource.Id.mylistView);
             editText1 = FindViewById<EditText>(Resource.Id.editText1);
             adapter             = new ListviewAdapter(this, mItems);
@@ -77,7 +79,7 @@ namespace Boodschapp_PO4
         }
 
 
-        void EditText1_KeyPress(object sender, Android.Views.View.KeyEventArgs e) 
+        void EditText1_KeyPress(object sender, Android.Views.View.KeyEventArgs e)
         {
         if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) {
         e.Handled = true;
@@ -101,7 +103,7 @@ namespace Boodschapp_PO4
 
             }
             else
-                e.Handled = false;            
+                e.Handled = false;
         }
 
 
@@ -117,12 +119,12 @@ namespace Boodschapp_PO4
 
         //void Button_Click(object sender, System.EventArgs e)
         //{
-            
+
 
         //    var currentvar1 = editText1.Text;
 
 
-        //    
+        //
 
 
         //}
@@ -145,7 +147,7 @@ namespace Boodschapp_PO4
         }
 
 
-       
+
 
     }
 }

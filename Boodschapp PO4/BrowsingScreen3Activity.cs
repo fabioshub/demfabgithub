@@ -32,7 +32,7 @@ namespace Boodschapp_PO4
 
         string fullPath = Path.Combine(
             System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments),
-             "anushaar.txt");
+             "Grocerylist.txt");
         
         protected override void OnCreate(Bundle bundle)
         {
@@ -125,12 +125,12 @@ namespace Boodschapp_PO4
             if(Counter == ClickedProducts.Count)
             {
                 ClickedProducts.Add(mProductList[position].name.ToString());
-                Toast.MakeText(this, mProductList[position].name + " selected", ToastLength.Short).Show();
+                //Toast.MakeText(this, mProductList[position].name + " selected", ToastLength.Short).Show();
             }
             else
             {
                 ClickedProducts.Remove(mProductList[position].name.ToString());
-                Toast.MakeText(this, mProductList[position].name + " deselected", ToastLength.Short).Show();
+                //Toast.MakeText(this, mProductList[position].name + " deselected", ToastLength.Short).Show();
             }
 
             Counter = 0;
