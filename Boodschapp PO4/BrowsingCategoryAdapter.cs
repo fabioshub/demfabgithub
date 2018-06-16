@@ -21,6 +21,8 @@ namespace Boodschapp_PO4
         public event EventHandler<int>  ItemClick;
         public ProductList              mProductList;
         int radius;
+        int value;
+        int value2;
 
 
         public BrowsingCategoryAdapter(ProductList productList)
@@ -34,8 +36,19 @@ namespace Boodschapp_PO4
             BrowsingViewHolder vh   = new BrowsingViewHolder(itemView, OnClick);
             //return vh;
 
-            itemView.LayoutParameters.Height = parent.Height/5;
-            radius = itemView.LayoutParameters.Height;
+            value   = parent.Height / 4;
+            value2  = parent.Width / 4;
+            if (value < value2)
+            {
+                itemView.LayoutParameters.Height = value2;
+            }
+
+            else
+            {
+                itemView.LayoutParameters.Height = value;
+            }
+ 
+            //radius = itemView.LayoutParameters.Height;
 
             return vh;
         }
@@ -45,9 +58,9 @@ namespace Boodschapp_PO4
             BrowsingViewHolder vh   = holder as BrowsingViewHolder;
             //vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
-            vh.CategoryView.Radius = radius / 2.2f;
-            
-           
+            //vh.CategoryView.Radius = radius / 2.2f;
+
+
 
 
 

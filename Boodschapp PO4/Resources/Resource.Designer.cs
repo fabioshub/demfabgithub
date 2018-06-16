@@ -2427,9 +2427,6 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f020069
 			public const int notification_tile_bg = 2130837609;
 			
-			// aapt resource value: 0x7f020069
-			public const int notification_tile_bg = 2130837609;
-			
 			// aapt resource value: 0x7f02006a
 			public const int notify_panel_notification_icon_bg = 2130837610;
 			

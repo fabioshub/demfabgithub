@@ -6,11 +6,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#fff2f2f2">
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:weightSum="100"
+        android:layout_marginBottom="0dp"
+        android:background="#fff2f2f2">
+        <Button
+            android:text="Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView1"
         android:scrollbars="vertical"
