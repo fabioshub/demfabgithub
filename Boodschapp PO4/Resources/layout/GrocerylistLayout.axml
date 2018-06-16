@@ -22,7 +22,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/button3"
-            android:background="#ffff8471"
+            android:background="#ffffb900"
             android:gravity="center" />
         <TextView
             android:text="Lijst"
@@ -32,7 +32,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/button4"
-            android:background="#ffffc6b3"
+            android:background="#ffffd56f"
             android:gravity="center" />
         <TextView
             android:text="?"
@@ -41,7 +41,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:id="@+id/button4"
+            android:id="@+id/explain"
             android:background="#ffffffff"
             android:gravity="center" />
     </GridLayout>
@@ -82,6 +82,6 @@
             android:textColorHint="#FFFFFF"
             android:textSize="14sp"
             android:singleLine="true"
-            android:background="#ffff7171" />
+            android:background="#ffffa51a" />
     </GridLayout>
 </LinearLayout>
