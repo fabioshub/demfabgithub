@@ -60,17 +60,19 @@ namespace Boodschapp_PO4
             vh.BrowseImage.SetImageResource(mProductList[position].image);
             //vh.CategoryView.Radius = radius / 2.2f;
 
+
             if (mProductList[position].category.ToString() == "Food")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 132, 108)); }
 
             if (mProductList[position].category.ToString() == "Drinks")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 161, 146)); }
 
             if (mProductList[position].category.ToString() == "Dishes")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 187, 174)); }
 
             if (mProductList[position].category.ToString() == "Nonfood")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(244, 248, 255)); }
+            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(252, 206, 195)); }
+
 
             vh.BrowseImage.LayoutParameters.Height = radius - (radius / 3);
             vh.BrowseImage.LayoutParameters.Width  = radius;
