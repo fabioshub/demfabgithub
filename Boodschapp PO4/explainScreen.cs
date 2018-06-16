@@ -17,7 +17,7 @@ namespace Boodschapp_PO4
     [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
     public class explainScreen : Activity
     {
-        TextView Uitleg;
+        TextView Uitleg, browsescreen, list;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,7 +25,28 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.explainScreen);
             Uitleg = FindViewById<TextView>(Resource.Id.uitleg);
+            browsescreen = FindViewById<TextView>(Resource.Id.button12);
+            list = FindViewById<TextView>(Resource.Id.button22);
+            browsescreen.Click += Browsescreen_Click;
+            list.Click += List_Click;
+        }
 
+        void Browsescreen_Click(object sender, EventArgs e)
+        {
+            var demiIntent = new Intent(this, typeof(BrowsingScreen1Activity));
+
+            //demiIntent.PutExtra("lijst", mItems.ToArray());
+
+            StartActivity(demiIntent);
+        }
+
+        void List_Click(object sender, EventArgs e)
+        {
+            var demiIntent = new Intent(this, typeof(GrocerylistActivity));
+
+            //demiIntent.PutExtra("lijst", mItems.ToArray());
+
+            StartActivity(demiIntent);
         }
 
     }
