@@ -2767,9 +2767,6 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080063
 			public const int image = 2131230819;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int imageView1 = 2131230919;
-			
 			// aapt resource value: 0x7f0800b0
 			public const int img1 = 2131230896;
 			
@@ -2800,8 +2797,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080065
 			public const int list_item = 2131230821;
 			
-			// aapt resource value: 0x7f0800ca
-			public const int masked = 2131230922;
+			// aapt resource value: 0x7f0800c9
+			public const int masked = 2131230921;
 			
 			// aapt resource value: 0x7f0800b8
 			public const int media_actions = 2131230904;
@@ -3079,8 +3076,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int visible = 2131230921;
+			// aapt resource value: 0x7f0800c8
+			public const int visible = 2131230920;
 			
 			// aapt resource value: 0x7f08004d
 			public const int withText = 2131230797;
