@@ -20,7 +20,7 @@ namespace Boodschapp_PO4
     }
 
 
-    [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
+    [Activity(Label = "boodschapp", MainLauncher = true, Theme = "@style/AppTheme")]
     public class GrocerylistActivity : Activity
     {
         List<string>        mItems = new List<string>();
