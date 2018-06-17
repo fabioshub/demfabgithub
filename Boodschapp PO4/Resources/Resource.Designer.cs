@@ -2404,10 +2404,10 @@ namespace Boodschapp_PO4
 			public const int error = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int HelpItem = 2130837603;
+			public const int iconl = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ListItem = 2130837604;
+			public const int iconlaunch = 2130837604;
 			
 			// aapt resource value: 0x7f020065
 			public const int min = 2130837605;
