@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="100"
     android:background="#fff2f2f2">
 <!--  <LinearLayout
         android:orientation="horizontal"
@@ -30,7 +31,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_weight="10"
         android:orientation="horizontal"
         android:rowCount="1"
         android:columnCount="7">
@@ -41,7 +42,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
-            android:id="@+id/button3"
+            android:id="@+id/BrowseTextView"
             android:background="#ffff6125"
             android:gravity="center" />
         <TextView
@@ -51,7 +52,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
-            android:id="@+id/button4"
+            android:id="@+id/ListTextView"
             android:background="#ffff8354"
             android:gravity="center" />
         <TextView
@@ -61,7 +62,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:id="@+id/explain"
+            android:id="@+id/InfoTextView"
             android:background="#ffffffff"
             android:gravity="center" />
     </GridLayout>
@@ -69,5 +70,6 @@
         android:id="@+id/recyclerView1"
         android:scrollbars="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="570sp" />
+        android:layout_height="0dp"
+        android:layout_weight="90" />
 </LinearLayout>

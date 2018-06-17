@@ -141,6 +141,7 @@ namespace Boodschapp_PO4
             //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(demiIntent);
+            OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
         }
 
 
@@ -151,6 +152,7 @@ namespace Boodschapp_PO4
             //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(explainintent);
+            OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
         }
 
 
