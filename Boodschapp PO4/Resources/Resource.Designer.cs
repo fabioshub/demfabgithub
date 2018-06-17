@@ -2340,26 +2340,26 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020078
-			public const int avd_hide_password_1 = 2130837624;
-			
-			// aapt resource value: 0x7f020079
-			public const int avd_hide_password_2 = 2130837625;
-			
 			// aapt resource value: 0x7f02007a
-			public const int avd_hide_password_3 = 2130837626;
+			public const int avd_hide_password_1 = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int avd_hide_password_2 = 2130837627;
+			
+			// aapt resource value: 0x7f02007c
+			public const int avd_hide_password_3 = 2130837628;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02007b
-			public const int avd_show_password_1 = 2130837627;
-			
-			// aapt resource value: 0x7f02007c
-			public const int avd_show_password_2 = 2130837628;
-			
 			// aapt resource value: 0x7f02007d
-			public const int avd_show_password_3 = 2130837629;
+			public const int avd_show_password_1 = 2130837629;
+			
+			// aapt resource value: 0x7f02007e
+			public const int avd_show_password_2 = 2130837630;
+			
+			// aapt resource value: 0x7f02007f
+			public const int avd_show_password_3 = 2130837631;
 			
 			// aapt resource value: 0x7f020055
 			public const int BathroomItemsAsset = 2130837589;
@@ -2404,67 +2404,73 @@ namespace Boodschapp_PO4
 			public const int error = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int min = 2130837603;
+			public const int iconl = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int navigation_empty_icon = 2130837604;
+			public const int iconlaunch = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notification_action_background = 2130837605;
+			public const int min = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int notification_bg = 2130837606;
+			public const int navigation_empty_icon = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_bg_low = 2130837607;
+			public const int notification_action_background = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg_low_normal = 2130837608;
+			public const int notification_bg = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_bg_low_pressed = 2130837609;
+			public const int notification_bg_low = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_bg_normal = 2130837610;
+			public const int notification_bg_low_normal = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notification_bg_normal_pressed = 2130837611;
+			public const int notification_bg_low_pressed = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int notification_icon_background = 2130837612;
-			
-			// aapt resource value: 0x7f020076
-			public const int notification_template_icon_bg = 2130837622;
-			
-			// aapt resource value: 0x7f020077
-			public const int notification_template_icon_low_bg = 2130837623;
+			public const int notification_bg_normal = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_tile_bg = 2130837613;
+			public const int notification_bg_normal_pressed = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notify_panel_notification_icon_bg = 2130837614;
+			public const int notification_icon_background = 2130837614;
+			
+			// aapt resource value: 0x7f020078
+			public const int notification_template_icon_bg = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int notification_template_icon_low_bg = 2130837625;
 			
 			// aapt resource value: 0x7f02006f
-			public const int splash_logo = 2130837615;
+			public const int notification_tile_bg = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int splash_screen = 2130837616;
+			public const int notify_panel_notification_icon_bg = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int tooltip_frame_dark = 2130837617;
+			public const int splash_logo = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int tooltip_frame_light = 2130837618;
+			public const int splash_screen = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int trash1 = 2130837619;
+			public const int tooltip_frame_dark = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int trash2 = 2130837620;
+			public const int tooltip_frame_light = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int XmarkAsset = 2130837621;
+			public const int trash1 = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int trash2 = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int XmarkAsset = 2130837623;
 			
 			static Drawable()
 			{
@@ -2767,6 +2773,9 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080063
 			public const int image = 2131230819;
 			
+			// aapt resource value: 0x7f0800c7
+			public const int imageView1 = 2131230919;
+			
 			// aapt resource value: 0x7f0800b0
 			public const int img1 = 2131230896;
 			
@@ -2797,8 +2806,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080065
 			public const int list_item = 2131230821;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int masked = 2131230921;
+			// aapt resource value: 0x7f0800ca
+			public const int masked = 2131230922;
 			
 			// aapt resource value: 0x7f0800b8
 			public const int media_actions = 2131230904;
@@ -3076,8 +3085,8 @@ namespace Boodschapp_PO4
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int visible = 2131230920;
+			// aapt resource value: 0x7f0800c9
+			public const int visible = 2131230921;
 			
 			// aapt resource value: 0x7f08004d
 			public const int withText = 2131230797;

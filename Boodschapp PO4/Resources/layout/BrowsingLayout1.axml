@@ -43,7 +43,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/BrowseTextView"
-            android:background="#ffff6125"
+            android:background="#ff00779b"
             android:gravity="center" />
         <TextView
             android:text="Lijst"
@@ -53,7 +53,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="3"
             android:id="@+id/ListTextView"
-            android:background="#ffff8354"
+            android:background="#ff50c5f9"
             android:gravity="center" />
         <TextView
             android:text="info?"
