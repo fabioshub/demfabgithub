@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Boodschapp_PO4
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, NoHistory = true)]
     public class FSplashScreen : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

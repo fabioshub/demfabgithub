@@ -21,6 +21,7 @@ namespace Boodschapp_PO4
         BrowsingGroupAdapter            mAdapter;
         ProductList                     mProductList;
         Button                          button;
+        TextView                        ButtonGroceries;
         ProductCategory                 CategoryID;
         int                             waiter = 0;
         List<string>                    ListOfProducts = new List<string>();
@@ -47,6 +48,7 @@ namespace Boodschapp_PO4
             mProductList        = new ProductList(CategoryID);
 
             //button              = FindViewById<Button>(Resource.Id.button1);
+            ButtonGroceries     = FindViewById<TextView>(Resource.Id.ListTextView);
 
             //----------------------------------------------------------------------------------------
             // Layout Managing Set-up
@@ -60,6 +62,7 @@ namespace Boodschapp_PO4
             mAdapter.ItemClick += OnItemClick;
 
             //button.Click += Button_Click; ;
+            ButtonGroceries.Click += TextViewGroceries_Click;
 
             mRecyclerView.SetAdapter(mAdapter);
 
@@ -95,6 +98,21 @@ namespace Boodschapp_PO4
                 var intent = new Intent(this, typeof(GrocerylistActivity));
 
                 intent.PutExtra("lijst", ListOfProducts.ToArray());
+                await Task.Delay(300);
+                StartActivity(intent);
+                OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
+                waiter = 0;
+            }
+        }
+
+        async void TextViewGroceries_Click(object sender, EventArgs e)
+        {
+            if (waiter == 0)
+            {
+                waiter += 1;
+                var intent = new Intent(this, typeof(GrocerylistActivity));
+
+                //intent.PutExtra("lijst", ListOfProducts.ToArray());
                 await Task.Delay(300);
                 StartActivity(intent);
                 OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
