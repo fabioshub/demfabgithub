@@ -84,7 +84,7 @@
         android:rowCount="10"
         android:columnCount="5"
         android:background="#FFFFFF">
-        <TextView
+    <!-- <TextView
             android:text="Algemene uitleg"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView1"
@@ -100,7 +100,7 @@
             android:divider="#fff77800"
             android:dividerHeight="0dp"
             android:text="Deze app biedt de mogelijkheid complete gerechten te selecteren, en de benodigde items die nodig zijn dit gerecht te maken, met de klik van één knop toe te voegen aan uw boodschappenlijst."
-            android:layout_margin="20px" />
+            android:layout_margin="20px" />-->
         <TextView
             android:text="Items toevoegen"
             android:textAppearance="?android:attr/textAppearanceLarge"
