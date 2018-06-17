@@ -62,6 +62,7 @@
     <Compile Include="BrowsingScreen2Activity.cs" />
     <Compile Include="BrowsingScreen3Activity.cs" />
     <Compile Include="BrowsingViewHolder.cs" />
+    <Compile Include="FSplashScreen.cs" />
     <Compile Include="GrocerylistActivity.cs" />
     <Compile Include="ListviewAdapter.cs" />
     <Compile Include="ProductCategory.cs" />
@@ -229,6 +230,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CheckmarkAsset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Splasher.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
