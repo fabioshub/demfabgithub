@@ -50,7 +50,7 @@ namespace Boodschapp_PO4
             itemView.LayoutParameters.Height = parent.Height / 4;
 
             radius = itemView.LayoutParameters.Height;
-            value = radius;// - (radius / 3);
+            value = radius/2;// - (radius / 3);
 
             return vh;
         }
@@ -65,26 +65,26 @@ namespace Boodschapp_PO4
 
             if (mProductList[position].category.ToString() == "Eten")
             {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(214, 229, 255));
-                vh.BrowseImage.LayoutParameters.Height = (value - (radius/3));
-                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.6);
+                vh.BrowseImage.LayoutParameters.Height = (value - (value/4));
+                vh.BrowseImage.LayoutParameters.Width = (int)((value - (value / 4)) * 1.6);
             }
 
             if (mProductList[position].category.ToString() == "Drinken")
             {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(224, 235, 255));
-                vh.BrowseImage.LayoutParameters.Height = value;
-                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.6);
+                vh.BrowseImage.LayoutParameters.Height = (value + (value/4));
+                vh.BrowseImage.LayoutParameters.Width = (int)((value + (value / 4)) * 1.6);
             }
 
             if (mProductList[position].category.ToString() == "Recepten")
             {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(224, 235, 255));
                 vh.BrowseImage.LayoutParameters.Height = value;
-                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.86);
+                vh.BrowseImage.LayoutParameters.Width = (int)(value * 2.03);
             }
 
             if (mProductList[position].category.ToString() == "Nonfood")
             {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(214, 229, 255));
-                vh.BrowseImage.LayoutParameters.Height = value;
-                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.1);
+                vh.BrowseImage.LayoutParameters.Height = (radius - (radius/5));
+                vh.BrowseImage.LayoutParameters.Width = (int)((radius - (radius / 5)) * 0.76);
             }
 
 
