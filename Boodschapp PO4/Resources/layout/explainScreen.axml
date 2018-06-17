@@ -14,6 +14,7 @@
         android:layout_weight="10"
         android:orientation="horizontal"
         android:rowCount="1"
+        android:scrollY=""
         android:columnCount="8">
         <TextView
             android:layout_width="0dp"
@@ -116,7 +117,7 @@
             android:id="@+id/uitleg"
             android:divider="#fff77800"
             android:dividerHeight="0dp"
-            android:text="Vanaf het beginscherm kunt u een categorie kiezen. Eten en drinken brengen u naar een selectie van populaire producten die u meteen aan uw lijst kan toevoegen. Dishes zijn complete gerechten. "
+            android:text="Selecteer de producten zodat deze groen worden. Nadat u uw selectie heeft gemaakt, kunt u op de toevoeg knop klikken om alle groene producten toe te voegen aan uw lijst. "
             android:layout_margin="20px" />
         <TextView
             android:text="Handmatig items toevoegen of verwijderen"
