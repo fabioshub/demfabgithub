@@ -81,6 +81,7 @@ namespace Boodschapp_PO4
                 //Toast.MakeText(this, "This is in group " + mProductList[position].group, ToastLength.Short).Show();
                 await Task.Delay(300);
                 StartActivity(intent);
+                OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
                 waiter = 0;
             }
         }
@@ -96,6 +97,7 @@ namespace Boodschapp_PO4
                 intent.PutExtra("lijst", ListOfProducts.ToArray());
                 await Task.Delay(300);
                 StartActivity(intent);
+                OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
                 waiter = 0;
             }
         }
