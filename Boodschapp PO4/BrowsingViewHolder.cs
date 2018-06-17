@@ -25,7 +25,7 @@ namespace Boodschapp_PO4
 
         public BrowsingViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
-            //Category        = itemView.FindViewById<TextView>(Resource.Id.categoryView);
+            Category        = itemView.FindViewById<TextView>(Resource.Id.categoryView);
             Group           = itemView.FindViewById<TextView>(Resource.Id.groupView);
             Name            = itemView.FindViewById<TextView>(Resource.Id.productView);
             BrowseImage     = itemView.FindViewById<ImageView>(Resource.Id.browsingimageView);

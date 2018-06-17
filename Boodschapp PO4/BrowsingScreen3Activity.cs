@@ -60,7 +60,9 @@ namespace Boodschapp_PO4
             //button          = FindViewById<Button>(Resource.Id.ListButton);
             AddButton       = FindViewById<Button>(Resource.Id.addbutton);
             ButtonGroceries = FindViewById<ImageView>(Resource.Id.ListImageView);
-            ButtonHelp      = FindViewById<ImageView>(Resource.Id.HelpImageView); ;
+            ButtonHelp      = FindViewById<ImageView>(Resource.Id.HelpImageView);
+
+            AddButton.Background.Alpha = 100;
 
 
             //----------------------------------------------------------------------------------------
@@ -141,6 +143,11 @@ namespace Boodschapp_PO4
                 //Toast.MakeText(this, mProductList[position].name + " deselected", ToastLength.Short).Show();
             }
 
+            if (ClickedProducts.Count > 0)
+            {AddButton.Background.Alpha = 255;}
+            else
+            {AddButton.Background.Alpha = 100;}
+
             Counter = 0;
             
         }
@@ -154,6 +161,12 @@ namespace Boodschapp_PO4
             }
             string jsonoutput = Newtonsoft.Json.JsonConvert.SerializeObject(ListOfProducts, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(fullPath, jsonoutput);
+
+            if (ClickedProducts.Count == 1)
+            { Toast.MakeText(this, ClickedProducts.Count + " Product toegevoegd", ToastLength.Short).Show(); }
+            if (ClickedProducts.Count > 1)
+            { Toast.MakeText(this, ClickedProducts.Count + " Producten toegevoegd", ToastLength.Short).Show(); }
+          
         }
 
 

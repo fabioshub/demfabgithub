@@ -36,19 +36,21 @@ namespace Boodschapp_PO4
             BrowsingViewHolder vh   = new BrowsingViewHolder(itemView, OnClick);
             //return vh;
 
-            value   = parent.Height / 4;
-            value2  = parent.Width / 4;
-            if (value < value2)
-            {
-                itemView.LayoutParameters.Height = value2;
-            }
+            //value   = parent.Height / 4;
+            //value2  = parent.Width / 4;
+            //if (value < value2)
+            //{
+            //    itemView.LayoutParameters.Height = value2;
+            //}
 
-            else
-            {
-                itemView.LayoutParameters.Height = value;
-            }
- 
+            //else
+            //{
+            //    itemView.LayoutParameters.Height = value;
+            //}
+            itemView.LayoutParameters.Height = parent.Height / 4;
+
             radius = itemView.LayoutParameters.Height;
+            value = radius;// - (radius / 3);
 
             return vh;
         }
@@ -56,26 +58,38 @@ namespace Boodschapp_PO4
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             BrowsingViewHolder vh   = holder as BrowsingViewHolder;
-            //vh.Category.Text        = mProductList[position].category.ToString();
+            vh.Category.Text        = mProductList[position].category.ToString();
             vh.BrowseImage.SetImageResource(mProductList[position].image);
             //vh.CategoryView.Radius = radius / 2.2f;
 
 
             if (mProductList[position].category.ToString() == "Eten")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 132, 108)); }
+            {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(214, 229, 255));
+                vh.BrowseImage.LayoutParameters.Height = (value - (radius/3));
+                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.6);
+            }
 
             if (mProductList[position].category.ToString() == "Drinken")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 161, 146)); }
+            {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(224, 235, 255));
+                vh.BrowseImage.LayoutParameters.Height = value;
+                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.6);
+            }
 
             if (mProductList[position].category.ToString() == "Recepten")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 187, 174)); }
+            {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(224, 235, 255));
+                vh.BrowseImage.LayoutParameters.Height = value;
+                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.86);
+            }
 
             if (mProductList[position].category.ToString() == "Nonfood")
-            { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(252, 206, 195)); }
+            {   vh.CategoryView.SetCardBackgroundColor(Color.Rgb(214, 229, 255));
+                vh.BrowseImage.LayoutParameters.Height = value;
+                vh.BrowseImage.LayoutParameters.Width = (int)(value * 1.1);
+            }
 
 
-            vh.BrowseImage.LayoutParameters.Height = radius - (radius / 3);
-            vh.BrowseImage.LayoutParameters.Width  = radius;
+            //vh.BrowseImage.LayoutParameters.Height = radius - (radius / 3);
+            //vh.BrowseImage.LayoutParameters.Width = value;
 
 
 

@@ -2134,7 +2134,7 @@ namespace Boodschapp_PO4
         public ProductList()
         {
             mProducts = new List<Product>();
-            mProducts.Add(new Product(ProductCategory.Eten, image: Resource.Drawable.download));
+            mProducts.Add(new Product(ProductCategory.Eten, image: Resource.Drawable.FoodItemsAsset));
             int counter;
 
             counter = 0;
@@ -2150,6 +2150,16 @@ namespace Boodschapp_PO4
 
                     if (counter == mProducts.Count)
                     {
+                        if (mConfirmedProducts[i].category.ToString() == "Eten")
+                        { mConfirmedProducts[i].image = Resource.Drawable.FoodItemsAsset; }
+                        if (mConfirmedProducts[i].category.ToString() == "Drinken")
+                        { mConfirmedProducts[i].image = Resource.Drawable.DrinkItemsAsset; }
+                        if (mConfirmedProducts[i].category.ToString() == "Recepten")
+                        { mConfirmedProducts[i].image = Resource.Drawable.DishItemsAsset; }
+                        if (mConfirmedProducts[i].category.ToString() == "Nonfood")
+                        { mConfirmedProducts[i].image = Resource.Drawable.BathroomItemsAsset; }
+
+
                         mProducts.Add(mConfirmedProducts[i]);
                     }
                 }
