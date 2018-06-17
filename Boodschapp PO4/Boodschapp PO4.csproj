@@ -105,6 +105,8 @@
     <AndroidResource Include="Resources\drawable\error.png" />
     <AndroidResource Include="Resources\drawable\min.png" />
     <AndroidResource Include="Resources\drawable\circle.png" />
+    <AndroidResource Include="Resources\drawable\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">

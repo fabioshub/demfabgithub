@@ -14,7 +14,7 @@ using Android.Support.Transitions;
 
 namespace Boodschapp_PO4
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
     public class BrowsingScreen1Activity : AppCompatActivity
     {
         RecyclerView                    mRecyclerView;

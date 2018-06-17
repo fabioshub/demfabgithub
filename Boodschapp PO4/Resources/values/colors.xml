@@ -6,4 +6,5 @@
     
     <color name="SelectedColor">#8fd185</color>
     <color name="DefaultColor">#d9e5d7</color>
+    <color name="splash_background">#FF6125</color>
 </resources>
