@@ -70,7 +70,7 @@ namespace Boodschapp_PO4
         Thee,
         Cosmetica,
         Dierenvoeding,
-        Reinigingsmiddelen,
+        Reinigingsmiddel,
         Wasmiddelen,
         Kinderen,
         // Vanaf hier alleen nog recepten

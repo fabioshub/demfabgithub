@@ -103,7 +103,6 @@
             android:layout_margin="20px" />-->
         <TextView
             android:text="Items toevoegen"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView1"
             android:layout_margin="20px"
             android:textColor="#ff107cad" />
@@ -120,7 +119,6 @@
             android:layout_margin="20px" />
         <TextView
             android:text="Handmatig items toevoegen of verwijderen"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView1"
             android:layout_margin="20px"
             android:textColor="#ff107cad" />
