@@ -21,8 +21,10 @@ namespace Boodschapp_PO4
         RecyclerView.LayoutManager  mLayoutManager;
         BrowsingProductAdapter      mAdapter;
         ProductList                 mProductList;
-        Button                      button;
+        //Button                      button;
         Button                      AddButton;
+        ImageView                   ButtonGroceries, ButtonHelp;
+
         ProductCategory             CategoryID;
         ProductGroup                GroupID;
         int                         waiter = 0;
@@ -55,8 +57,10 @@ namespace Boodschapp_PO4
 
             mProductList    = new ProductList(CategoryID, GroupID);
 
-            button          = FindViewById<Button>(Resource.Id.ListButton);
+            //button          = FindViewById<Button>(Resource.Id.ListButton);
             AddButton       = FindViewById<Button>(Resource.Id.addbutton);
+            ButtonGroceries = FindViewById<ImageView>(Resource.Id.ListImageView);
+            ButtonHelp      = FindViewById<ImageView>(Resource.Id.HelpImageView); ;
 
 
             //----------------------------------------------------------------------------------------
@@ -74,8 +78,12 @@ namespace Boodschapp_PO4
             mAdapter = new BrowsingProductAdapter(mProductList);
             mAdapter.ItemClick += OnItemClick;
 
-            button.Click    += Button_Click;
             AddButton.Click += OnItemAdd;
+
+            ButtonGroceries.Click   += List_Click;
+            ButtonHelp.Click        += Help_Click;
+
+
 
             mRecyclerView.SetAdapter(mAdapter);
 
@@ -149,7 +157,7 @@ namespace Boodschapp_PO4
         }
 
 
-        async void Button_Click(object sender, EventArgs e)
+        async void List_Click(object sender, EventArgs e)
         {
             if (waiter == 0)
             {
@@ -157,6 +165,21 @@ namespace Boodschapp_PO4
                 var intent = new Intent(this, typeof(GrocerylistActivity));
 
                 intent.PutExtra("lijst", ListOfProducts.ToArray());
+                await Task.Delay(300);
+                StartActivity(intent);
+                OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
+                waiter = 0;
+            }
+        }
+
+        async void Help_Click(object sender, EventArgs e)
+        {
+            if (waiter == 0)
+            {
+                waiter += 1;
+                var intent = new Intent(this, typeof(explainScreen));
+
+                //intent.PutExtra("lijst", ListOfProducts.ToArray());
                 await Task.Delay(300);
                 StartActivity(intent);
                 OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);

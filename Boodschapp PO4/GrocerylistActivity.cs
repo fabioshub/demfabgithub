@@ -24,7 +24,9 @@ namespace Boodschapp_PO4
     public class GrocerylistActivity : Activity
     {
         List<string>        mItems = new List<string>();
-        TextView textViewdemi, textViewexplain;
+        ImageView           ButtonProducts, ButtonHelp;
+
+        //TextView            textViewdemi, textViewexplain;
         ListView            mListView;
         EditText            editText1;
         ListviewAdapter     adapter;
@@ -40,19 +42,26 @@ namespace Boodschapp_PO4
 
             SetContentView(Resource.Layout.GrocerylistLayout);
 
-            mListView   = FindViewById<ListView>(Resource.Id.mylistView);
-            editText1 = FindViewById<EditText>(Resource.Id.editText1);
+            mListView           = FindViewById<ListView>(Resource.Id.mylistView);
+            editText1           = FindViewById<EditText>(Resource.Id.editText1);
             adapter             = new ListviewAdapter(this, mItems);
             mListView.Adapter   = adapter;
-            textViewdemi = FindViewById<TextView>(Resource.Id.button3);
-            textViewexplain = FindViewById<TextView>(Resource.Id.explain);
+
+            ButtonProducts      = FindViewById<ImageView>(Resource.Id.BrowseImageView);
+            ButtonHelp          = FindViewById<ImageView>(Resource.Id.HelpImageView);
+            //textViewdemi        = FindViewById<TextView>(Resource.Id.button3);
+            //textViewexplain     = FindViewById<TextView>(Resource.Id.explain);
+
+
             //button.Click        += Button_Click;
             mListView.ItemClick += MListView_ItemClick;
-            editText1.KeyPress += EditText1_KeyPress;
+            editText1.KeyPress  += EditText1_KeyPress;
 
-            textViewexplain.Click += ButtonExplain_Click;
+            //textViewexplain.Click   += ButtonExplain_Click;
+            //textViewdemi.Click      += TextViewdemi_Click;
+            ButtonHelp.Click        += ButtonExplain_Click;
+            ButtonProducts.Click    += TextViewdemi_Click;
 
-            textViewdemi.Click += TextViewdemi_Click;
             try
             {
                 var storedjson1 = File.ReadAllText(fullPath);

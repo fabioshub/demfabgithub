@@ -34,8 +34,24 @@
         android:layout_weight="10"
         android:orientation="horizontal"
         android:rowCount="1"
-        android:columnCount="7">
+        android:columnCount="8">
         <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ff00779b" />
+        <ImageView
+            android:src="@drawable/BrowseItem"
+            android:id="@+id/BrowseImageView"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:background="#ff00779b"
+            android:gravity="center" />
+    <!--<TextView
             android:text="Producten zoeken"
             android:textColor="@android:color/white"
             android:layout_width="0dp"
@@ -44,8 +60,18 @@
             android:layout_columnWeight="3"
             android:id="@+id/BrowseTextView"
             android:background="#ff00779b"
+            android:gravity="center" />-->
+        <ImageView
+            android:src="@drawable/ListItem"
+            android:id="@+id/ListImageView"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:background="#ff00779b"
             android:gravity="center" />
-        <TextView
+    <!--<TextView
             android:text="Lijst"
             android:textColor="@android:color/white"
             android:layout_width="0dp"
@@ -54,8 +80,18 @@
             android:layout_columnWeight="3"
             android:id="@+id/ListTextView"
             android:background="#ff50c5f9"
+            android:gravity="center" />-->
+        <ImageView
+            android:src="@drawable/HelpItem"
+            android:id="@+id/HelpImageView"
+            android:padding="7dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ff00779b"
             android:gravity="center" />
-        <TextView
+    <!--<TextView
             android:text="info?"
             android:textColor="#ff5a5a5a"
             android:layout_width="0dp"
@@ -64,7 +100,7 @@
             android:layout_columnWeight="1"
             android:id="@+id/InfoTextView"
             android:background="#ffffffff"
-            android:gravity="center" />
+            android:gravity="center" />-->
     </GridLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView1"

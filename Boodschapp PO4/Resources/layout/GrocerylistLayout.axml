@@ -14,6 +14,50 @@
         android:layout_weight="10"
         android:orientation="horizontal"
         android:rowCount="1"
+        android:columnCount="8">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ff00779b" />
+        <ImageView
+            android:src="@drawable/BrowseItem"
+            android:id="@+id/BrowseImageView"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:background="#ff00779b"
+            android:gravity="center" />
+        <ImageView
+            android:src="@drawable/ListItem"
+            android:id="@+id/ListImageView"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="3"
+            android:background="#ff00779b"
+            android:gravity="center" />
+        <ImageView
+            android:src="@drawable/HelpItem"
+            android:id="@+id/HelpImageView"
+            android:padding="7dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#ff00779b"
+            android:gravity="center" />
+    </GridLayout>
+<!--<GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:rowCount="1"
         android:columnCount="7">
         <TextView
             android:text="Producten zoeken"
@@ -45,7 +89,7 @@
             android:id="@+id/explain"
             android:background="#ffffffff"
             android:gravity="center" />
-    </GridLayout>
+    </GridLayout>-->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

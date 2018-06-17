@@ -61,13 +61,13 @@ namespace Boodschapp_PO4
             //vh.CategoryView.Radius = radius / 2.2f;
 
 
-            if (mProductList[position].category.ToString() == "Food")
+            if (mProductList[position].category.ToString() == "Eten")
             { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 132, 108)); }
 
-            if (mProductList[position].category.ToString() == "Drinks")
+            if (mProductList[position].category.ToString() == "Drinken")
             { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 161, 146)); }
 
-            if (mProductList[position].category.ToString() == "Dishes")
+            if (mProductList[position].category.ToString() == "Recepten")
             { vh.CategoryView.SetCardBackgroundColor(Color.Rgb(255, 187, 174)); }
 
             if (mProductList[position].category.ToString() == "Nonfood")

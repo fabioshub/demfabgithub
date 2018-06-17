@@ -17,18 +17,19 @@ namespace Boodschapp_PO4
     [Activity(Label = "boodschapp", MainLauncher = false, Theme = "@style/AppTheme")]
     public class explainScreen : Activity
     {
-        TextView Uitleg, browsescreen, list;
+        TextView        Uitleg;
+        ImageView       browsescreen, list;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.explainScreen);
-            Uitleg = FindViewById<TextView>(Resource.Id.uitleg);
-            browsescreen = FindViewById<TextView>(Resource.Id.button12);
-            list = FindViewById<TextView>(Resource.Id.button22);
-            browsescreen.Click += Browsescreen_Click;
-            list.Click += List_Click;
+            Uitleg                  = FindViewById<TextView>(Resource.Id.uitleg);
+            browsescreen            = FindViewById<ImageView>(Resource.Id.BrowseImageView);
+            list                    = FindViewById<ImageView>(Resource.Id.ListImageView);
+            browsescreen.Click      += Browsescreen_Click;
+            list.Click              += List_Click;
         }
 
         void Browsescreen_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace Boodschapp_PO4
             //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(demiIntent);
+            OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
         }
 
         void List_Click(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace Boodschapp_PO4
             //demiIntent.PutExtra("lijst", mItems.ToArray());
 
             StartActivity(demiIntent);
+            OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
         }
 
     }
